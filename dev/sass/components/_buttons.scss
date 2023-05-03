@@ -1,0 +1,10 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.button-green {
+    @include mixins.button(variables.$clr-green);
+}
+
+.button-white{
+    @include mixins.button(variables.$clr-white);
+}

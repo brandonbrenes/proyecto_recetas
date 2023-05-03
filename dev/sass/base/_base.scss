@@ -1,0 +1,20 @@
+@use '../abstracts/variables';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: variables.$clr-white;
+}
+
+h1{
+    span{
+        color: variables.$clr-wine;
+    }
+}
+
+a{
+    text-decoration: none;
+}

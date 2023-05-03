@@ -1,0 +1,25 @@
+//font: https://fonts.google.com/specimen/Source+Sans+Pro
+
+//font-family
+$ff: 'Source Sans Pro', sans-serif;
+
+//font-weight
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+//font-size
+$fs-lg: 4.375rem; //logo-name, titles
+$fs-xmed: 3.438rem; //home page subtitle
+$fs-med: 3.125rem; //recipe name/title - our best recipes
+$fs-sm: 1.875rem; //homepage description, recipe name/title - featured recipes
+$fs-xsm: 1.563rem; //recipe description - our best recipes
+$fs-xxsm: 1.375rem; //recipe prep, cook, level - our best recipes
+$fs-xxxsm: 1.25rem; //recipe prep, cook, level - featured recipes, footer legal
+
+//colors
+$clr-white: #ffffff;
+$clr-black: #0000;
+$clr-green: #23755c;
+$clr-wine: #892441;
+$clr-dark-wine: #6a152d;
