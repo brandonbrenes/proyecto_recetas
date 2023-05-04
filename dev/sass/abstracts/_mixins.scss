@@ -1,12 +1,13 @@
 @use '../abstracts/variables';
 
-@mixin button($clr-bg) {
-    border-radius: 3rem;
+@mixin button($clr-bg, $rouded) {
+    border-radius: 2rem;
     padding: 0.6rem 2rem;
     position: relative;
     text-decoration: none;
+    border: none;
 
-    @if ($clr-bg ==variables.$clr-green) {
+    @if $rouded == false{
         background-color: $clr-bg;
         color: variables.$clr-white;
         overflow: hidden;
@@ -35,7 +36,9 @@
             content: "";
             transform: scale(0.95);
         }
-    } @else if($clr-bg ==variables.$clr-white){
+    } @else {
         background-color: $clr-bg;
+        color: variables.$clr-white;
+        padding: 1rem 1.2rem 1rem 1.2rem;
     }
 }

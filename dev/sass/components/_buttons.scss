@@ -2,9 +2,9 @@
 @use '../abstracts/mixins';
 
 .button-green {
-    @include mixins.button(variables.$clr-green);
+    @include mixins.button(variables.$clr-green, false);
 }
 
-.button-white{
-    @include mixins.button(variables.$clr-white);
+.button-green-rouded{
+    @include mixins.button(variables.$clr-green, true);
 }

@@ -1,0 +1,4 @@
+@use '../abstracts/variables';
+.bg-wine{
+    background-color: variables.$clr-wine;
+}
