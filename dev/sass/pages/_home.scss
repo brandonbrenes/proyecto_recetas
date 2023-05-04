@@ -1,8 +1,24 @@
-.curve{
+@use '../abstracts/media-queries';
+
+.curve {
+
+    // background: url(../imgs/1366_2000.jpg) no-repeat;
+    // background-attachment: fixed; //fija la imagen para que no se escrolee
+    // background-position: right top;
+    // background-attachment: scroll;
+
+    position: relative;
+    height: 60rem;
+
     background-image: url(../images/curva.png);
+
+    
+
+    @include media-queries.respond-to(media-queries.$small-desktop){
+        background-position-y: 8rem;
+    }
+
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: scroll;
-    background-position-y: 8rem;
-    background-size: contain;
 }

@@ -4,9 +4,11 @@
 $ff: 'Source Sans Pro', sans-serif;
 
 //font-weight
-$fw-regular: 400;
-$fw-semibold: 600;
-$fw-bold: 700;
+// $fw-regular: 400;
+// $fw-semibold: 600;
+// $fw-bold: 700;
+//variables - maps
+$font-weights: ("regular":400, "medium":500, "bold":700);
 
 //font-size
 $fs-lg: 4.375rem; //logo-name, titles

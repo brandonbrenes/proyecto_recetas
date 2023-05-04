@@ -15,82 +15,80 @@
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="curve">
-    <section class="container">
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="images/logo.svg" alt="logo" width="100">
-                    </a>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+<body class="curve"">
+    <nav class="container navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" alt="logo" width="100">
+            </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu fs-4">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Categorías
-                                </a>
-                                <ul class="dropdown-menu fs-4">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
-                                aria-label="Search">
-                            <button class="button-green-rouded" type="submit" title="search">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        
-    </section>
-    <main>
-        <!-- Inicio -->
-        <section>
-            <div class="container">
-                <div class="row mt-5">
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
+                        aria-label="Search">
+                    <button class="button-green-rouded" type="submit" title="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="row mt-5">
 
-                    <div class="m-auto col-md-6">
-                        <div>
-                            <div class="justify-content-center">
-                                <h1 class="content">Recetas que se <span>adaptan</span> a ti</h1>
-                                <div class="d-flex">
-                                    <a href="#" class="button-green">Login</a>
-                                </div>
+                <div class="m-auto col-md-6">
+                    <div>
+                        <div class="justify-content-center">
+                            <h1 class="content">Recetas que se <span>adaptan</span> a ti</h1>
+                            <div class="d-flex">
+                                <a href="#" class="button-green">Login</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <img class="img-fluid" src="images/Spaghetti.png" alt="Spaguetti">
-                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/Spaghetti.png" alt="Spaguetti">
                 </div>
             </div>
+        </div>
+    </header>
+    <main>
+        <!-- Inicio -->
+        <section>
+            
         </section>
         <!-- Inicio -->
         <!-- Carrusel -->
         <section class="mt-5" id="tranding">
-            <div class="container-xxl bg-wine p-0">
+            <div class="container-xxl p-0">
                 <h1 class="text-center text-light mt-sm-auto">Recetas más votadas</h1>
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
@@ -270,7 +268,7 @@
                         </div>
                         <!-- Slide-end -->
                     </div>
-    
+
                     <div class="tranding-slider-control">
                         <div class="swiper-button-prev slider-arrow">
                             <ion-icon name="arrow-back-outline"></ion-icon>
@@ -280,14 +278,14 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-    
+
                 </div>
             </div>
         </section>
         <!-- End Carrusel -->
     </main>
 
-   
+
 
     <!-- BS JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

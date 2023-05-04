@@ -14824,10 +14824,15 @@ a {
 }
 
 .curve {
+  position: relative;
+  height: 60rem;
   background-image: url(../images/curva.png);
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: scroll;
-  background-position-y: 8rem;
-  background-size: contain;
+}
+@media only screen and (min-width: 992px) {
+  .curve {
+    background-position-y: 8rem;
+  }
 }
