@@ -10,9 +10,14 @@ body{
 }
 
 h1{
+    font-size: variables.$fs-lg;
     span{
         color: variables.$clr-wine;
     }
+}
+
+h2{
+    font-size: variables.$fs-xmed;
 }
 
 a{

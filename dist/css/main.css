@@ -14582,6 +14582,9 @@ template {
   color: #ffffff;
   min-width: 4rem;
   min-height: 4rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  padding: 0;
 }
 
 .button-white-rouded {
@@ -14594,6 +14597,9 @@ template {
   color: #000000;
   min-width: 4rem;
   min-height: 4rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  padding: 0;
   overflow: hidden;
   z-index: 1;
   display: inline-block;
@@ -14621,6 +14627,48 @@ template {
   top: 0;
 }
 .button-white-rouded:active {
+  background-color: #6a152d;
+  content: "";
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.card-btn-green {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  background-color: #23755c;
+  color: #ffffff;
+  min-width: 4rem;
+  min-height: 4rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.card-btn-green:hover {
+  color: #ffffff;
+}
+.card-btn-green::before {
+  background-color: #892441;
+  border-radius: 0 0 100% 100%;
+  height: 200%;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: -200%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  width: 100%;
+  z-index: -1;
+}
+.card-btn-green:hover::before {
+  top: 0;
+}
+.card-btn-green:active {
   background-color: #6a152d;
   content: "";
   -webkit-transform: scale(0.95);
@@ -14834,7 +14882,7 @@ body {
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
+  background: #23755c;
 }
 
 .navbar {
@@ -14858,8 +14906,15 @@ body {
   background-color: #ffffff;
 }
 
+h1 {
+  font-size: 4.375rem;
+}
 h1 span {
   color: #892441;
+}
+
+h2 {
+  font-size: 3.438rem;
 }
 
 a {
