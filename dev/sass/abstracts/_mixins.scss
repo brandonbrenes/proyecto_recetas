@@ -1,17 +1,26 @@
 @use '../abstracts/variables';
 
-@mixin button($clr-bg, $rouded) {
+@mixin button($clr-bg, $clr, $rouded, $animate) {
     border-radius: 2rem;
     padding: 0.6rem 2rem;
     position: relative;
     text-decoration: none;
     border: none;
+    background-color: $clr-bg;
+    color: $clr;
 
-    @if $rouded == false{
-        background-color: $clr-bg;
-        color: variables.$clr-white;
+    @if $rouded == true {
+        min-width: 4rem;
+        min-height: 4rem;
+    }
+
+    @if $animate == true{
         overflow: hidden;
         z-index: 1;
+
+        &:hover{
+            color: variables.$clr-white;
+        }
 
         &::before{
             background-color: variables.$clr-wine;
@@ -36,9 +45,5 @@
             content: "";
             transform: scale(0.95);
         }
-    } @else {
-        background-color: $clr-bg;
-        color: variables.$clr-white;
-        padding: 1rem 1.2rem 1rem 1.2rem;
     }
 }
