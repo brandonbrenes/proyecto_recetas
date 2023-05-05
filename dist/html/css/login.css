@@ -1,0 +1,52 @@
+@import url(vars.css);
+
+.form-group{
+    margin-bottom: 12px;
+}
+
+.btn-orange{
+    display: inline-block;
+    border-radius: 0.5rem  0.5rem  0.5rem  0.5rem;
+    border-style: solid;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.5s;
+
+    margin-top: 2rem;
+    background-color: var(--clr-orange-dark);
+    border: none;
+    transition: .3s ease all;
+}
+
+.btn-orange:hover{
+    background-color: var(--clr-orange-dark-2);
+}
+/*
+.btn-oranger::after{
+    content: "";
+    background-color: var(--clr-orange-dark-2);
+    width: 100%;
+    background: var(--clr-orange-dark-2);
+    position: absolute;
+}
+
+.btn-orange:hover::after{
+    background-color: var(--clr-orange-dark-2);
+}*/
+
+.form-check-input:checked{
+    background-color: var(--clr-orange) !important;
+    border: 0.1rem var(--clr-orange)  !important;
+ }
+ .form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+    color: black !important;
+    outline: 0;
+    border: 0 !important;
+    box-shadow: 0 0 0 0.2rem hsl(32, 80%, 48%, 30%) !important;
+    border: 1;
+    border-color: var(--clr-orange) !important;
+ }
+
+.ocultar {
+    display: none;
+}

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+
+    <!--Archivos Css-->
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <!-- Swipper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fuentes Alegreya Sans para titulos, subtitulos y botones, Roboto para textos largos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section>
+            <div class="hero">
+                <nav>
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a href="index.html"><img src="imgs/logo.svg" class="logo"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="registro-receta.html">Añadir receta</a>
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link active" href="#">Filtro</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <img src="imgs/usuario.svg" class="user-pic" onclick="toggleMenu()">
+
+                    <div class="sub-menu-wrap" id="subMenu" style="right:0px;">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="imgs/usuario.svg">
+                                <h3>Nombre Usuario</h3>
+                            </div>
+                            <hr>
+                            <a href="perfil-usuario.html" class="submenu-link">
+                                <i class="fa-solid fa-user i-icon"></i>
+                                <p>Cuenta</p>
+                                <span><i class="fa-solid"></i></span>
+                            </a>
+                            <hr>
+                            <a href="recuperar-contrasenia.html" class="submenu-link">
+                                <i class="fa-solid fa-circle-question i-icon"></i>
+                                <p>Cambiar contraseña</p>
+                                <span><i class="fa-solid"></i></span>
+                            </a>
+                            <hr>
+                            <a href="login.html" class="submenu-link">
+                                <i class="fa-solid fa-right-from-bracket i-icon"></i>
+                                <p>Salir</p>
+                                <span><i class="fa-solid"></i></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <section class="container-fluid box-title">
+            <div class="text-center">
+                <img src="imgs/logo.svg" alt="Foto portada">
+            </div>
+            <h1 class="text-center">Tus recetas favoritas en un mismo sitio</h1>
+        </section>
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/nav.js"></script>
+    </header>
+
+    <!-- sección imagen/texto   -->
+    <section class="mt-5 p-5 bg-black bg-opacity-50 rounded-4 container" id="about">
+        <div class="row justify-content-around ">
+            <div class="col bg-black bg-opacity-50 rounded-3 m-3">
+                <div class="m-5 text-center p-2 bg-light rounded-3">
+                    <div class="bg-black bg-opacity-50 rounded-4 p-5 text-center">
+                        <label for="exampleFormControlFile1">Subir imagen</label>
+                    </div>
+                    <div class="p-3">
+                        <input type="file" class="form-control p-0" id="exampleFormControlFile1">
+                    </div>
+                    <div>
+                        <input class="btn-br w-50" type="submit" value="Guardar" id="guardar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col bg-black bg-opacity-50 rounded-3">
+                <div class="container">
+                    <div class="about-text">
+                        <div class="container text-light mt-4">
+                            <div class="text-center">
+                                <h2 class="text-light">Datos del Usuario</h2>
+                                <hr />
+                            </div>
+                            <div class="text-light">
+                                <h3>Nombre:</h3>
+                                <p>espacio donde se loggea el nombre de la base</p>
+                                <h3>Correo:</h3>
+                                <p>espacio donde se loggea el correo de la base</p>
+                                <h3>Cantidad de recetas: </h3>
+                                <p>un monton</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sección imagen/texto   -->
+
+    <!--Area de recetas-->
+    <section>
+        <!--Recetas coleccionadas-->
+        <section class="container">
+            <section class="mt-5 mb-5 p-4 align-items-center bg-black bg-opacity-25 rounded-4 container">
+                <h2 class="text-center text-light">Recetas coleccionadas</h2>
+                <hr />
+                <!--Swiper-->
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <!--Cards-->
+                        <div class="card-wrapper swiper-wrapper">
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/1.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/2.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/1.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/3.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/1.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/2.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class=" p-1 fa-solid fa-heart likes"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            ver mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--End Cards-->
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <hr />
+                <!--End Swiper-->
+                <div class="align-items-center final-button">
+                    <a href="#" class="btn-br">ver todas</a>
+                </div>
+            </section>
+        </section>
+        <!--Fin de Recetas coleccionadas-->
+
+        <!--Recetas del usuario-->
+        <section class="container">
+            <div class="mt-5 mb-5 p-4 align-items-center bg-black bg-opacity-25 rounded-4 container">
+                <div class="text-light text-center pt-2">
+                    <h2 class="">Tus recetas</h2>
+                </div>
+                <hr />
+                <!--Swiper-->
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <!--Cards-->
+                        <div class="card-wrapper swiper-wrapper">
+
+                            <!--Editar-->
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/1.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Fin ditar-->
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/2.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/3.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/1.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/2.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide active">
+                                <div class="card-header text-center">
+                                    <img src="imgs/3.jpg" class="card-img-top" alt="1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on
+                                        the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                </div>
+                                <div class="card-footer d-md-flex pb-2 me-0 justify-content-between">
+                                    <div class="text-start">
+                                        <div class="ms-3 d-flex text-dark pt-3">
+                                            <i class="p-1 fa-solid fa-trash delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-end pt-2">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn-br" data-bs-toggle="modal"
+                                            data-bs-target="#modal-editar">
+                                            editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Cards-->
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <hr />
+                <!--End Swiper-->
+                <div class="align-items-center final-button">
+                    <a href="#" class="btn-br">ver todas</a>
+                </div>
+            </div>
+        </section>
+        <!--Fin de Recetas del usuario-->
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/nav.js"></script>
+    </section>
+    <!--Fin de area de recetas-->
+
+    <!--Area de modal-->
+    <section>
+        <!--Modal ver-->
+        <section>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header box-orange">
+                            <h1 class="modal-title fs-5 " id="staticBackdropLabel">Titulo de la receta</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <header>
+                                    <div class="text-center">
+                                        <img class="rounded-3 img-popup" src="imgs/1.jpg" alt="imagen-receta">
+                                    </div>
+                                    <hr />
+                                </header>
+
+                                <body>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2">
+                                        <p>Tiempo de preparacion:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Tiempo de cocción:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Tiempo Total:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Porciones:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <div class="container d-flex">
+                                            <p>Nivel de dificultad:
+                                            <div class="ms-3 d-flex text-warning star p-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half"></i>
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Categorias de la receta:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Ocasión para la receta:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Destacada:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <div class="container d-flex">
+                                            <p>Cantidad de votos:</p>
+                                            <div class="ms-3 d-flex text-dark">
+                                                <i class=" p-1 fa-solid fa-heart text-danger"></i><span>10k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Descripción:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Lista de ingredientes:</p>
+                                    </div>
+                                    <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                        <p>Pasos de preparación:</p>
+                                    </div>
+                                </body>
+                                <footer>
+                                    <hr>
+                                    <p>Nombre del dueño</p>
+                                    <a href="#">recetas relacionadas</a>
+                                    <hr>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-br" data-bs-dismiss="modal">cerrar</button>
+                            <button type="button" class="btn-br">Imprimir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin modal ver-->
+
+        <!--Modal Editar-->
+        <section>
+            <div class="modal fade" id="modal-editar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header box-orange">
+                            <h3 class="modal-title fs-5 " id="staticBackdropLabel">
+                                <div class="input-group">
+                                    <div class=" m-0 d-flex rounded-1 text-light">
+                                        <input type="text"
+                                            class="rounded-start text-light bg-black bg-opacity-50 form-control-sm m-0"
+                                            id="recetaName" placeholder="nombre de la receta">
+                                        <div class="p-2 bg-black bg-opacity-75 rounded-end">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <header>
+                                <div class="text-center p-2 rounded-3">
+                                    <div class="bg-black bg-opacity-50 rounded-4 p-2 text-center form-group">
+                                        <div class="m-1">
+                                            <label for="exampleFormControlFile1">
+                                                <img class="rounded-4 w-50" src="imgs/1.jpg" alt="imagen-receta">
+                                            </label>
+                                        </div>
+                                        <div class="p-3 ">
+                                            <input type="file"
+                                                class="form-control p-0 bg-black bg-opacity-50 text-light"
+                                                id="exampleFormControlFile1">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <hr>
+                            </header>
+
+                            <body>
+                                <div class="bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-flex pt-3">
+                                        <div class="ps-2">
+                                            <p>Tiempo de preparación:</p>
+                                        </div>
+                                        <div class="ps-2">
+                                            <label for="schedule" class="form-label"></label>
+                                            <input type="time" id="preparacion"
+                                                class="bg-dark opacity-50 rounded-2 text-light" min="00:00" max="23:00"
+                                                step="900" name="schedule" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-flex pt-3">
+                                        <div class="ps-2">
+                                            <p>Tiempo de cocción:</p>
+                                        </div>
+                                        <div class="ps-2">
+                                            <label for="schedule" class="form-label"></label>
+                                            <input type="time" id="coccion"
+                                                class="bg-dark opacity-50 rounded-2 text-light" min="00:00" max="23:00"
+                                                step="900" name="schedule" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-flex pt-3">
+                                        <div class="ps-2">
+                                            <p>Tiempo Total:</p>
+                                        </div>
+                                        <div class="ps-2 m-1">
+                                            <label for="schedule" class="form-label"></label>
+                                            <input type="time" id="total"
+                                                class="bg-dark opacity-50 rounded-2 text-light" min="00:00" max="23:00"
+                                                step="900" name="schedule" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-flex pt-3">
+                                        <div class="ps-2">
+                                            <p>Porciones:</p>
+                                        </div>
+                                        <div class="container-sm">
+                                            <label for="schedule" class="form-label"></label>
+                                            <input type="number" id="porciones"
+                                                class="bg-black bg-opacity-50 rounded-2 text-light" name="numbers"
+                                                min="1" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-inline-flex pt-2">
+                                        <div class="ps-2">
+                                            <p class="pt-1 pb-0 h-500">Nivel de dificultad:</p>
+                                        </div>
+                                        <div class="ps-2">
+                                            <select class="w-100 bg-black bg-opacity-50 text-light form-select-sm"
+                                                aria-label="Default select example" required>
+                                                <option selected>Escoja una dificultad</option>
+                                                <option value="1">Facil</option>
+                                                <option value="2">Medio</option>
+                                                <option value="3">Dificil</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-inline-flex pt-2">
+                                        <div class="ps-2">
+                                            <p class="pt-1 pb-0 h-500">Categoria:</p>
+                                        </div>
+                                        <div class="ps-2">
+                                            <select class="w-100 bg-black bg-opacity-50 text-light form-select-sm"
+                                                aria-label="Default select example" required>
+                                                <option selected>Escoja una categoria</option>
+                                                <option value="1">Facil</option>
+                                                <option value="2">Medio</option>
+                                                <option value="3">Dificil</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="d-inline-flex pt-2">
+                                        <div class="ps-2">
+                                            <p class="pt-1 pb-0 h-500">Ocasión:</p>
+                                        </div>
+                                        <div class="ps-2">
+                                            <select class="w-100 bg-black bg-opacity-50 text-light form-select-sm"
+                                                aria-label="Default select example" required>
+                                                <option selected>Escoja una Ocasion</option>
+                                                <option value="1">Facil</option>
+                                                <option value="2">Medio</option>
+                                                <option value="3">Dificil</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="mb-3">
+                                        <label for="descripcion" class="form-label">Descripción:</label>
+                                        <textarea class="form-control bg-dark bg-opacity-50 text-light" id="descripcion"
+                                            rows="3" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="mb-3">
+                                        <label for="descripcion" class="form-label">Ingredientes:</label>
+                                        <textarea class="form-control bg-dark bg-opacity-50 text-light" id="descripcion"
+                                            rows="3" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
+                                    <div class="mb-3">
+                                        <label for="descripcion" class="form-label">Pasos de preparación:</label>
+                                        <textarea class="form-control bg-dark bg-opacity-50 text-light" id="descripcion"
+                                            rows="3" required></textarea>
+                                    </div>
+                                </div>
+                            </body>
+
+                            <footer>
+
+                            </footer>
+                        </div>
+                        <div>
+                            <hr class="p-0 m-0">
+                            <div class="d-flex justify-content-between m-0 p-4">
+                                <div>
+                                    <button type="button" class="btn-br" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                                <div>
+                                    <button type="button" id="guardar-cambios" class="btn-br">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin modal Editar-->
+    </section>
+    <!--Fin area de modal-->
+</body>
+
+    <footer class="footer text-center text-lg-start pb-2 pt-3">
+        <div class="container d-flex justify-content-center p-0">
+            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
+                <i class="fab fa-facebook-f min-w-20 text-center"></i>
+                </button></a>
+            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
+                <i class="fab fa-youtube min-w-20 text-center"></i>
+                </button></a>
+            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
+                <i class="fab fa-instagram min-w-20 text-center"> </i>
+                </button></a>
+            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer ">
+                <i class="fab fa-twitter min-w-20 text-center"> </i>
+                </button></a>
+        </div>
+        <div class="text-center text-white">
+            ©2022 Copyright:
+            <a class="text-white" href="https://gitlab.com/krisarias/gusticos">UCR Estudiantes</a>
+        </div>
+    </footer>
+
+</html>

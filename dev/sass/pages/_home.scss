@@ -12,8 +12,6 @@
 
     background-image: url(../images/curva.png);
 
-    
-
     @include media-queries.respond-to(media-queries.$small-desktop){
         background-position-y: 8rem;
     }
