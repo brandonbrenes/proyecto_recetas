@@ -1,0 +1,53 @@
+:root{
+    --clr-clear: hsl(30, 39%, 91%);
+
+    --clr-dark-blue: hsl(257, 19%, 22%);
+    --clr-blue: hsl(221, 44%, 41%); 
+    --clr-blue-light: hsl(192, 23%, 70%);
+    
+    --clr-green-light: hsl(163, 25%, 53%);
+    --clr-green: hsl(130, 83%, 44%);
+
+    --clr-orange-middle: hsl(28, 57%, 72%);
+    --clr-orange-dark: hsl(16, 56%, 45%);
+    --clr-orange-dark-2: hsl(16, 67%, 52%);
+    --clr-orange-light: hsla(34, 79%, 81%, 0.404);
+    --clr-orange-light-dark: hsla(34, 100%, 42%, 0.404);
+
+    --clr-purple: hsl(5, 15%, 70%);
+
+    --clr-brown: hsl(36, 30%, 52%);
+    --clr-brown-dark: hsl(36, 49%, 39%);
+
+    --clr-red: hsl(0, 100%, 48%);
+
+    --clr-gray-dark: hsla(0, 0%, 18%, 0.815);
+
+    /* animation */
+    --clr-light: hsla(34, 79%, 81%);
+    --clr-middle: hsla(34, 67%, 60%);
+    --clr-dark: hsla(34, 95%, 40%);
+
+
+    /*nuevo diseño*/
+    --clr-black: hsl(0, 4%, 10%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-orange: hsl(32, 80%, 48%);
+
+    --clr-gray: hsla(0, 11%, 18%, 0.6);
+
+    /*Fuentes*/
+    --font-primary: 'Alegreya Sans';
+    --font-secundary: 'Roboto';
+
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+
+
+/*font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;*/
+}

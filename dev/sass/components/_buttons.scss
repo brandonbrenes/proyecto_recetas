@@ -21,4 +21,3 @@
 .card-btn-green{
     @include mixins.button(variables.$clr-green, variables.$clr-white, true, true);
 }
-

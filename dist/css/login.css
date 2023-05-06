@@ -21,6 +21,18 @@
 .btn-orange:hover{
     background-color: var(--clr-orange-dark-2);
 }
+/*
+.btn-oranger::after{
+    content: "";
+    background-color: var(--clr-orange-dark-2);
+    width: 100%;
+    background: var(--clr-orange-dark-2);
+    position: absolute;
+}
+
+.btn-orange:hover::after{
+    background-color: var(--clr-orange-dark-2);
+}*/
 
 .form-check-input:checked{
     background-color: var(--clr-orange) !important;

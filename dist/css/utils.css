@@ -11,6 +11,13 @@ html {
     text-size-adjust: 100%;
 }
 
+body {
+    width: 100%;
+    background: url(../imgs/1366_2000.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 /*  */
 .box-title{
     background-color: var(--clr-gray);
