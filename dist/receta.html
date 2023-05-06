@@ -1,118 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Gusticos</title>
 
-    <link rel="stylesheet" href="../css/utils.css">
-    <link rel="stylesheet" href="../css/nav.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/main.css">
 
+    <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    </head>
+    <!-- remixincon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-    
-    <section>
-        <div>
-            <div class="card" style="width: 50rem; height: 82rem; margin-left: 20rem;margin-top: 3rem; margin-bottom: 5rem;">
-                <img class="card-img-top" style="height: 20rem; margin-top: 2rem; margin-left: 14rem; width: 20rem;" src="../imgs/1.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title text-center" style="margin-top: 5;">Información receta</h5>
-                  <div class="p-2 bg-black bg-opacity-50 rounded-2">
-                    <p>Tiempo de preparacion:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Tiempo de cocción:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Tiempo Total:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Porciones:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <div class="container d-flex">
-                        <p>Nivel de dificultad:
-                        <div class="ms-3 d-flex text-warning star p-1">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half"></i>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Categorias de la receta:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Ocasión para la receta:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Destacada:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <div class="container d-flex">
-                        <p>Cantidad de votos:</p>
-                        <div class="ms-3 d-flex text-dark">
-                            <i class=" p-1 fa-solid fa-heart text-danger"></i><span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Descripción:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Lista de ingredientes:</p>
-                </div>
-                <div class="p-2 bg-black bg-opacity-50 rounded-2 mt-1">
-                    <p>Pasos de preparación:</p>
-                </div>
-            </body>
-            <footer>
-                <hr>
-                <p>Nombre del dueño:</p>
-                <a href="#">Recetas relacionadas</a>
-                <hr>
-            </footer>
-                    <div class="container">
-                        <a href="index.html" class=" btn-br btn-primary align-content-center">Cerrar</a>
+    <!-- Fin nav -->
+    <nav class=" container navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" alt="logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa-solid fa-bars-sort"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-light">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu fs-4">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
+                        aria-label="Search">
+                    <button class="button-green-rouded" type="submit" title="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button class="button-white-rouded" type="button" title="usuario">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin nav -->
+
+    <!-- inicio header -->
+    <header>
+        <div class="container">
+            <div class="row mt-5">
+
+                <div class="m-auto col-md-6">
+                    <div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
+    <!-- inicio fin header -->
 
-    <footer class="footer text-center text-lg-start pb-2 pt-3">
+    <!-- inicio main -->
+    <main>
+        <!-- Sección todas las recetas -->
+        <section class="container-xxl row">
+            <div class="col-lg-9">
+                <h1 class="text-center">Pizza</h1>
+                <img class="img-fluid mx-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
+
+                <h2 class="text-center">Tiempo de cocción</h2>
+                <h3>Descripción</h3>
+                <p>Aquí debería de ir toda la información de la receta</p>
+            </div>
+            <div class="col-sm-3">
+                <h3 class="text-center">También te podrían interesar</h3>
+                <div class="row p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
+                                        </button>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <p class="col m-auto">12</p>
+                                </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
+                                        </button>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <p class="col m-auto">12</p>
+                                </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
+                                        </button>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <p class="col m-auto">12</p>
+                                </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="app"></div>
+    </main>
+    <!-- inicio main -->
+
+    <!-- inicio fin footer -->
+    <footer>
         <div class="container d-flex justify-content-center p-0">
-            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
-                <i class="fab fa-facebook-f min-w-20 text-center"></i>
-                </button></a>
-            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
-                <i class="fab fa-youtube min-w-20 text-center"></i>
-                </button></a>
-            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer">
-                <i class="fab fa-instagram min-w-20 text-center"> </i>
-                </button></a>
-            <a href="https://gitlab.com/krisarias/gusticos" type="button" class="btn-br mx-2 p-md-2 btn-footer ">
-                <i class="fab fa-twitter min-w-20 text-center"> </i>
-                </button></a>
+            <ul class="row">
+                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                        title="Facebook" class="button-white-rouded mx-2 p-md-2">
+                        <i class="fab fa-facebook-f min-w-20 text-center"></i>
+                    </a>
+                </li>
+                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                        title="Youtube" class="button-white-rouded mx-2 p-md-2">
+                        <i class="fab fa-youtube min-w-20 text-center"></i>
+                    </a>
+                </li>
+                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                        title="Instagram" class="button-white-rouded mx-2 p-md-2">
+                        <i class="fab fa-instagram min-w-20 text-center"> </i>
+                    </a>
+                </li>
+                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                        title="Twitter" class="button-white-rouded mx-2 p-md-2">
+                        <i class="fab fa-twitter min-w-20 text-center"> </i>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="text-center text-white">
-            ©2022 Copyright:
-            <a class="text-white" href="https://gitlab.com/krisarias/gusticos">UCR Estudiantes</a>
+            ©2023 Copyright:
+            <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
         </div>
     </footer>
+    <!-- inicio fin footer -->
+
+    <!-- Slider JS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!-- Slider JS -->
+
+    <!-- BS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- BS JS -->
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- VueJS -->
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+    <!-- main js -->
+
+    <!-- mounted app-->
+    <script>
+        const countedApp = app.mount("#app");
+    </script>
+    <!-- mounted app-->
 </body>
+
 </html>
