@@ -1,12 +1,17 @@
 @use '../abstracts/variables';
 
-.navbar{
+.navbar {
     background-color: variables.$clr-green;
     border-radius: 3rem;
     padding: 0.5rem;
     margin-top: 2.5rem;
 }
 
-.search-bar{
+.search-bar {
     border-radius: 3rem;
+    width: 35rem;
 }
+
+// .nav-item{
+//     color: variables.$clr-white;
+// }

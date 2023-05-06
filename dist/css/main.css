@@ -14545,6 +14545,7 @@ template {
   color: #ffffff;
   overflow: hidden;
   z-index: 1;
+  font-size: 1.875rem;
 }
 .button-green:hover {
   color: #ffffff;
@@ -14567,6 +14568,7 @@ template {
 }
 .button-green:active {
   background-color: #6a152d;
+  background-color: #ffffff;
   content: "";
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -14588,13 +14590,17 @@ template {
 }
 
 .button-white-rouded {
+  display: inline-block;
+  text-align: center;
+  padding: 0.69rem;
+  border: solid white 0.25rem !important;
   border-radius: 2rem;
   padding: 0.6rem 2rem;
   position: relative;
   text-decoration: none;
   border: none;
   background-color: #ffffff;
-  color: #000000;
+  color: #892441;
   min-width: 4rem;
   min-height: 4rem;
   max-width: 4rem;
@@ -14602,10 +14608,6 @@ template {
   padding: 0;
   overflow: hidden;
   z-index: 1;
-  display: inline-block;
-  text-align: center;
-  padding: 0.69rem;
-  border: solid white 0.25rem !important;
 }
 .button-white-rouded:hover {
   color: #ffffff;
@@ -14628,6 +14630,7 @@ template {
 }
 .button-white-rouded:active {
   background-color: #6a152d;
+  background-color: #ffffff;
   content: "";
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -14670,6 +14673,7 @@ template {
 }
 .card-btn-green:active {
   background-color: #6a152d;
+  background-color: #ffffff;
   content: "";
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -14894,6 +14898,15 @@ body {
 
 .search-bar {
   border-radius: 3rem;
+  width: 35rem;
+}
+
+footer {
+  background-color: #23755c;
+  padding: 2rem;
+}
+footer ul {
+  list-style-type: none;
 }
 
 * {
@@ -14925,12 +14938,8 @@ a {
   background-color: #892441;
 }
 
-footer {
-  background-color: #23755c;
-  padding: 2rem;
-}
-footer ul {
-  list-style-type: none;
+.text-green {
+  color: #114b3a;
 }
 
 .curve {

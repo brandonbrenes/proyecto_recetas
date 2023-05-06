@@ -45,6 +45,7 @@
 
         &:active {
             background-color: variables.$clr-dark-wine;
+            background-color: variables.$clr-white;
             content: "";
             transform: scale(0.95);
         }

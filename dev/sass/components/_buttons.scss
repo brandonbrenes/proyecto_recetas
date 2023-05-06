@@ -3,6 +3,7 @@
 
 .button-green {
     @include mixins.button(variables.$clr-green, variables.$clr-white, false, true);
+    font-size: variables.$fs-sm;
 }
 
 .button-green-rouded{
@@ -10,12 +11,11 @@
 }
 
 .button-white-rouded{
-    @include mixins.button(variables.$clr-white, variables.$clr-black, true, true);
-    
     display: inline-block;
     text-align: center;
     padding: 0.69rem;
     border: solid white .25rem !important;
+    @include mixins.button(variables.$clr-white, variables.$clr-wine, true, true);
 }
 
 .card-btn-green{

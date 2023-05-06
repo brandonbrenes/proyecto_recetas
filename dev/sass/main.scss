@@ -1,11 +1,15 @@
 @use 'vendor/bootstrap/bootstrap';
 @use 'vendor/swiper-bundle.min.scss';
 @use 'vendor/normalize/normalize';
+
 @use 'components/buttons';
 @use 'components/slider';
+
 @use 'layout/navigation';
+@use 'layout/footer';
+
 @use 'base/base';
 @use 'base/colors';
-@use 'layout/footer';
 @use 'base/typography';
+
 @use 'pages/home';

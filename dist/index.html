@@ -13,10 +13,12 @@
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+    <!-- remixincon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body class="curve">
-
+    <!-- Fin nav -->
     <nav class=" container navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -29,7 +31,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item text-light">
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
@@ -56,10 +58,16 @@
                     <button class="button-green-rouded" type="submit" title="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
+                    <button class="button-white-rouded" type="button" title="usuario">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
+    <!-- Fin nav -->
+
+    <!-- inicio header -->
     <header>
         <div class="container">
             <div class="row mt-5">
@@ -80,11 +88,14 @@
             </div>
         </div>
     </header>
+    <!-- inicio fin header -->
+
+    <!-- inicio main -->
     <main>
         <!-- Carrusel Más votadas-->
         <section id="tranding">
-            <h2 class="text-center text-light mt-5">Recetas más votadas</h2>
-            <div class="mt-lg-5 container-fluid bg-wine">
+            <h2 class="text-center text-light">Recetas más votadas</h2>
+            <div class="mt-lg-5 container-fluid bg-wine pb-4">
 
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
@@ -94,20 +105,12 @@
                                 <img src="images/tranding-food-1.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
                                 <div class="tranding-slide-content-bottom">
                                     <h2 class="food-name">
                                         Special Pizza
                                     </h2>
                                     <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
+                                        <span>Comida rápida</span>
                                     </h3>
                                 </div>
                             </div>
@@ -276,402 +279,322 @@
             </div>
         </section>
         <!-- End Carrusel -->
-        <div>
-            <section class="container mb-5">
 
-                <h2 class="text-center text-black mt-5 mb-5">Recetario</h2>
-                <section class="row">
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+        <!-- Sección todas las recetas -->
+        <section class="container">
+            <h2 class="text-center text-black mt-5">Recetario</h2>
+            <div class="dropdown">
+                <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="ri-equalizer-line"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" type="button">Comida rápida</button></li>
+                    <li><button class="dropdown-item" type="button">Desayunos</button></li>
+                    <li><button class="dropdown-item" type="button">Almuerzos</button></li>
+                    <li><button class="dropdown-item" type="button">Bebidas</button></li>
+                </ul>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
+                </div>
+                <div class="col-md-3 p-4">
+                    <div class="card rounded-5 shadow-lg">
+                        <div style="height: 0; padding-bottom: 100%; position: relative;">
+                            <img src="images/tranding-food-1.png" class="rounded-top-5"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                alt="Imagen de la receta">
+                        </div>
+                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
+                        <div class="card-body ">
+                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
+                            <h3 class="card-title">Pizza</h3>
+                            <p class="card-text">Breve descripción de la receta</p>
+                            <!-- <div class="position-relative">
+                                        <button type="button" class="btn btn-primary position-absolute"
+                                            style="top: -44rem; right: 10px;">
+                                            <i class="far fa-bookmark"></i> Guardar
                                         </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
+                                    </div> -->
+                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
+                                <div class="justify-content-start row">
+                                    <button type="button" class="card-btn-green col" title="Like">
+                                        <i class="fas fa-heart"></i>
                                     </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
+                                    <p class="col m-auto">12</p>
                                 </div>
+                                <button type="button" class="card-btn-green justify-content-center" title="Like">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
-                                    </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
-                                    </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="card rounded-5 shadow-lg">
-                            <div style="height: 0; padding-bottom: 100%; position: relative;">
-                                <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                    alt="Imagen de la receta">
-                            </div>
-                            <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                            <div class="card-body">
-                                <h4 class="card-subtitle mb-2 text-muted">@brandon</h4>
-                                <h3 class="card-title">Pizza</h3>
-                                <p class="card-text">Breve descripción de la receta</p>
-                                <!-- <div class="position-relative">
-                                    <button type="button" class="btn btn-primary position-absolute"
-                                        style="top: -44rem; right: 10px;">
-                                        <i class="far fa-bookmark"></i> Guardar
-                                    </button>
-                                </div> -->
-                                <div class="card-footer d-flex justify-content-between">
-                                    <div class="justify-content-start row">
-                                        <button type="button" class="card-btn-green col" title="Like">
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <p class="col m-auto">12</p>
-                                    </div>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
-                                    </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-        </div>
+                </div>
+            </div>
+            <!-- Botones prev y next -->
+            <div class="row justify-content-end mb-5">
+                <button class="card-btn-green me-3" type="button" title="Prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="card-btn-green me-4" type="button" title="Next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <!-- Botones prev y next -->
+        </section>
         <div id="app"></div>
     </main>
-    <footer class="footer text-center text-lg-start">
+    <!-- inicio main -->
+
+    <!-- inicio fin footer -->
+    <footer>
         <div class="container d-flex justify-content-center p-0">
             <ul class="row">
                 <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
@@ -701,6 +624,7 @@
             <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
         </div>
     </footer>
+    <!-- inicio fin footer -->
 
     <!-- Slider JS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
