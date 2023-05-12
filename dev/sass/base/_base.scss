@@ -1,25 +1,26 @@
 @use '../abstracts/variables';
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body{
+body {
     background-color: variables.$clr-white;
 }
 
-h1{
+h1 {
     font-size: variables.$fs-lg;
-    span{
+
+    span {
         color: variables.$clr-wine;
     }
 }
 
-h2{
+h2 {
     font-size: variables.$fs-xmed;
 }
 
-a{
+a {
     text-decoration: none;
 }
