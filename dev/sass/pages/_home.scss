@@ -1,6 +1,6 @@
 @use '../abstracts/media-queries';
 
-.curve {
+.curve{
 
     // background: url(../imgs/1366_2000.jpg) no-repeat;
     // background-attachment: fixed; //fija la imagen para que no se escrolee
@@ -10,13 +10,28 @@
     position: relative;
     height: 60rem;
 
-    background-image: url(../images/curva.png);
+
+    background-image: url(../images/curva_home.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    
 
     @include media-queries.respond-to(media-queries.$small-desktop){
         background-position-y: 8rem;
     }
 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include media-queries.respond-to(media-queries.$large-desktop){
+        background-position-y: 5rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$tablet-portrait){
+        background-position-y: 18rem;
+        background-position-x: -5rem;
+    }
+
+    @include media-queries.respond-to(media-queries.$phone){
+        background-position-x: -40rem;
+    }
 }

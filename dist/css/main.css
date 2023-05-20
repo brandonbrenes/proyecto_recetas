@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); /*!
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+/*!
  * Bootstrap  v5.3.0-alpha2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -14540,12 +14541,15 @@ template {
   padding: 0.6rem 2rem;
   position: relative;
   text-decoration: none;
+  text-align: center;
   border: none;
   background-color: #23755c;
   color: #ffffff;
   overflow: hidden;
   z-index: 1;
   font-size: 1.875rem;
+  min-width: 12rem;
+  padding: auto;
 }
 .button-green:hover {
   color: #ffffff;
@@ -14579,6 +14583,7 @@ template {
   padding: 0.6rem 2rem;
   position: relative;
   text-decoration: none;
+  text-align: center;
   border: none;
   background-color: #23755c;
   color: #ffffff;
@@ -14598,6 +14603,7 @@ template {
   padding: 0.6rem 2rem;
   position: relative;
   text-decoration: none;
+  text-align: center;
   border: none;
   background-color: #ffffff;
   color: #892441;
@@ -14641,6 +14647,7 @@ template {
   padding: 0.6rem 2rem;
   position: relative;
   text-decoration: none;
+  text-align: center;
   border: none;
   background-color: #23755c;
   color: #ffffff;
@@ -14726,11 +14733,27 @@ body {
   padding: 2rem 0;
 }
 
-@media (max-width: 1440px) {
+/*@media (max-width:1440px) {
   #tranding {
     padding: 7rem 0;
   }
+}*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #tranding {
+    padding: 5rem 0;
+  }
 }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #tranding {
+    padding: 6rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #tranding {
+    padding: 4.5rem 0;
+  }
+}
+
 #tranding .tranding-slider {
   height: 52rem;
   padding: 2rem 0;
@@ -14893,6 +14916,7 @@ body {
   height: 0;
   padding-bottom: 100%;
   position: relative;
+  cursor: pointer;
 }
 .card-img-container img {
   position: absolute;
@@ -14911,6 +14935,11 @@ body {
   position: absolute;
   top: 2rem;
   left: 5.2rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .likes-number {
+    display: none;
+  }
 }
 
 .navbar {
@@ -14976,13 +15005,29 @@ a {
 .curve {
   position: relative;
   height: 60rem;
-  background-image: url(../images/curva.png);
+  background-image: url(../images/curva_home.svg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .curve {
     background-position-y: 8rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .curve {
+    background-position-y: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .curve {
+    background-position-y: 18rem;
+    background-position-x: -5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .curve {
+    background-position-x: -40rem;
   }
 }

@@ -4,6 +4,8 @@
 .button-green {
     @include mixins.button(variables.$clr-green, variables.$clr-white, false, true);
     font-size: variables.$fs-sm;
+    min-width: 12rem;
+    padding: auto;
 }
 
 .button-green-rouded{

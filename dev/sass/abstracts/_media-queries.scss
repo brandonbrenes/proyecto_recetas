@@ -1,7 +1,8 @@
 $phone : '(max-width: 480px)';
-$tablet-portrait: '(max-width: 767px)';
-$tablet-landscape: '(min-width: 768px) and (max-width: 991px)';
-$small-desktop: '(min-width: 992px)';
+$tablet-portrait: '(max-width: 768px)';
+$tablet-landscape: '(min-width: 768px) and (max-width: 992px)';
+$small-desktop: '(min-width: 992px)  and (max-width: 1200px)';
+$medium-desktop: '(min-width: 1000px)';
 $large-desktop: '(min-width: 1200px)';
 $non-retina: 'screen and (-webkit-max-device-pixel-ratio:1)';
 $retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)';;

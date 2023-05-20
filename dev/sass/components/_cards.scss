@@ -1,7 +1,10 @@
+@use '../abstracts/media-queries';
+
 .card-img-container {
     height: 0;
     padding-bottom: 100%;
     position: relative;
+    cursor: pointer;
 
     img {
         position: absolute;
@@ -15,9 +18,14 @@
 
 .likes-number {
     position: relative;
+
     p {
         position: absolute;
         top: 2rem;
         left: 5.2rem;
+    }
+
+    @include media-queries.respond-to('(min-width: 768px) and (max-width: 1199px)') {
+        display: none;
     }
 }
