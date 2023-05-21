@@ -1,2 +1,34 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as variables;
+@use "sass:map";
 
+$lista-sizes: (
+    "font-lg",
+    "-med",
+    "-xmed",
+    "-sm",
+    "-xsm",
+    "-xxsm",
+    "-xxxsm"
+);
+
+$font-sizes: (
+    "fs-lg": 4.375rem,
+    "fs-xmed": 3.438rem,
+    "fs-med": 3.125rem,
+    "fs-sm": 2rem,
+    "fs-xsm": 1.563rem,
+    "fs-xxsm": 1.375rem,
+    "fs-xxxsm": 1.25rem
+);
+
+// @each $size in $lista-sizes {
+//     .font#{$size} {
+//         // font-size: $#{"fs"}#{$size};
+//     }
+// }
+
+@each $key in map-keys($font-sizes) {
+    .#{$key}{
+        font-size: map-get($font-sizes, $key);
+    }
+}

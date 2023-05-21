@@ -1,13 +1,29 @@
 .curve {
   position: relative;
-  height: 50rem;
-  background-image: url(../images/curva_home.svg);
+  height: 60rem;
+  background-image: url(../..//images/curva_home.svg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .curve {
     background-position-y: 8rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .curve {
+    background-position-y: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .curve {
+    background-position-y: 18rem;
+    background-position-x: -5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .curve {
+    background-position-x: -40rem;
   }
 }

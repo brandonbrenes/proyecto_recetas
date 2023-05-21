@@ -8,7 +8,9 @@
     <title>Gusticos</title>
 
     <!-- Style sheet -->
+    <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/main.css">
+
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
     <!-- remixincon -->
@@ -19,7 +21,7 @@
     <!-- Fin nav -->
     <nav class="container navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand ms-4 me-4" href="#">
                 <img src="images/logo.svg" alt="logo" width="100">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -29,37 +31,43 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item text-light">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="./registro.html">Registro</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categorías
-                        </a>
-                        <ul class="dropdown-menu fs-4">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Login</a>
                     </li>
+                    <li class="cuadro-seleccion"></li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
-                        aria-label="Search">
-                    <button class="button-green-rouded" type="submit" title="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <button class="button-white-rouded" type="button" title="usuario">
+                <div class="d-flex m-2">
+                    <form class="d-flex" role="search">
+                        <div class=" dropdown m-auto">
+                            <a class="nav-link dropdown-toggle me-3" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                filtro
+                            </a>
+                            <ul class="dropdown-menu fs-4">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
+                            aria-label="Search">
+                        <button class="button-green-rouded" type="submit" title="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html">
                         <i class="fa-solid fa-user"></i>
-                    </button>
-                </form>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -93,7 +101,7 @@
         <!-- Carrusel Más votadas-->
         <section id="tranding">
             <h2 class="text-center text-light">Recetas más votadas</h2>
-            
+
             <div class="mt-lg-5 container-fluid bg-wine pb-4">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">

@@ -14738,6 +14738,11 @@ body {
     padding: 7rem 0;
   }
 }*/
+@media only screen and (max-width: 480px) {
+  #tranding {
+    padding: 5rem 0;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #tranding {
     padding: 5rem 0;
@@ -14944,14 +14949,49 @@ body {
 
 .navbar {
   background-color: #23755c;
+  color: #ffffff;
   border-radius: 3rem;
-  padding: 0.5rem;
+  padding: 0 0 0 0;
   margin-top: 2.5rem;
 }
 
 .search-bar {
   border-radius: 3rem;
   width: 35rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  display: block;
+}
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-item {
+  margin: 0 1rem 0 1rem;
+  padding: 0.8rem;
+  text-align: center;
+  width: 8rem;
+  z-index: 1;
+}
+
+.cuadro-seleccion {
+  position: absolute;
+  width: 8rem;
+  height: 100%;
+  top: 0;
+  left: 14.7rem;
+  background-color: #892441;
+  z-index: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.nav-item:nth-child(1).active ­­∼ .cuadro-seleccion {
+  left: 14.7rem;
+  opacity: 1;
 }
 
 footer {
@@ -15002,32 +15042,34 @@ a {
   color: #892441;
 }
 
-.curve {
-  position: relative;
-  height: 60rem;
-  background-image: url(../images/curva_home.svg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.text-white {
+  color: #ffffff;
 }
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .curve {
-    background-position-y: 8rem;
-  }
+
+.fs-lg {
+  font-size: 4.375rem;
 }
-@media only screen and (min-width: 1200px) {
-  .curve {
-    background-position-y: 5rem;
-  }
+
+.fs-xmed {
+  font-size: 3.438rem;
 }
-@media only screen and (max-width: 768px) {
-  .curve {
-    background-position-y: 18rem;
-    background-position-x: -5rem;
-  }
+
+.fs-med {
+  font-size: 3.125rem;
 }
-@media only screen and (max-width: 480px) {
-  .curve {
-    background-position-x: -40rem;
-  }
+
+.fs-sm {
+  font-size: 2rem;
+}
+
+.fs-xsm {
+  font-size: 1.563rem;
+}
+
+.fs-xxsm {
+  font-size: 1.375rem;
+}
+
+.fs-xxxsm {
+  font-size: 1.25rem;
 }

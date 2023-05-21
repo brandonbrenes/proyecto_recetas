@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+@use '../abstracts/media-queries';
+
+h1 {
+    color: variables.$clr-green-light;
+    margin: 4rem 0 0 0rem;
+}
+
+.curve {
+    position: relative;
+    height: 60rem;
+    width: 100%;
+
+    background-image: url(../..//images/curva_perfil.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.imagen-contenedor {
+    margin: 5rem 0 12rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Oculta cualquier parte de la imagen que se salga del contenedor */
+
+    .img-usuario{
+        width: 100%;
+        height: auto;
+    }
+}

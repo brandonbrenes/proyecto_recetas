@@ -2,8 +2,9 @@
 
 .navbar {
     background-color: variables.$clr-green;
+    color: variables.$clr-white;
     border-radius: 3rem;
-    padding: 0.5rem;
+    padding: 0 0 0 0;
     margin-top: 2.5rem;
 }
 
@@ -12,6 +13,36 @@
     width: 35rem;
 }
 
-// .nav-item{
-//     color: variables.$clr-white;
-// }
+.nav-link {
+    color: variables.$clr-white;
+    display: block;
+
+    &:hover {
+        color: variables.$clr-white;
+    }
+}
+
+.nav-item {
+    margin: 0 1rem 0 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    width: 8rem;
+    z-index: 1;
+}
+
+.cuadro-seleccion {
+    position: absolute;
+    width: 8rem;
+    height: 100%;
+    top: 0;
+    left: 14.7rem;
+    background-color: variables.$clr-wine;
+    z-index: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.nav-item:nth-child(1).active ­­∼ .cuadro-seleccion {
+    left: 14.7rem;
+    opacity: 1;
+}

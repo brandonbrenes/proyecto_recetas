@@ -57,6 +57,9 @@ body {
 }*/
 
 #tranding {
+  @include media-queries.respond-to(media-queries.$phone) {
+    padding: 5rem 0;
+  }
   @include media-queries.respond-to(media-queries.$tablet-landscape) {
     padding: 5rem 0;
   }
