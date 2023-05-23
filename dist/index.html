@@ -18,10 +18,12 @@
 </head>
 
 <body class="curve" id="app">
-    <!-- Fin nav -->
-    <nav class="container navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-4 me-4" href="#">
+    
+    
+    <header class="container">
+        <!-- Inicio nav -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand me-4" href="index.html">
                 <img src="images/logo.svg" alt="logo" width="100">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -32,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./registro.html">Registro</a>
@@ -64,18 +66,16 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
-                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html">
+                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html" title="perfil">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- Fin nav -->
+        </nav>
+        <!-- Fin nav -->
 
-    <!-- inicio header -->
-    <header>
-        <div class="container">
+        <!-- Sección con eslogan e imagen -->
+        <section>
             <div class="row mt-5">
 
                 <div class="m-auto col-md-6">
@@ -89,12 +89,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid mx-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
+                    <img class="img-fluid m-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
                 </div>
             </div>
-        </div>
+        </section>
     </header>
-    <!-- inicio fin header -->
 
     <!-- inicio main -->
     <main>
@@ -289,18 +288,17 @@
         <!-- Sección todas las recetas -->
         <section class="container">
             <h2 class="text-center text-black mt-5">Recetario</h2>
-            <div class="dropdown">
+            <div class="dropdown d-flex justify-content-end">
                 <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class="ri-equalizer-line"></i>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu fs-4">
                     <li><button class="dropdown-item" type="button">Comida rápida</button></li>
                     <li><button class="dropdown-item" type="button">Desayunos</button></li>
                     <li><button class="dropdown-item" type="button">Almuerzos</button></li>
                     <li><button class="dropdown-item" type="button">Bebidas</button></li>
                 </ul>
-            </div>
             </div>
             <div class="row">
                 <!-- Tarjetas recetas -->

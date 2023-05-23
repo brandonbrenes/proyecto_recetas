@@ -14550,6 +14550,7 @@ template {
   font-size: 1.875rem;
   min-width: 12rem;
   padding: auto;
+  border: none;
 }
 .button-green:hover {
   color: #ffffff;
@@ -14578,6 +14579,46 @@ template {
           transform: scale(0.95);
 }
 
+.button-green-sm {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  background-color: #23755c;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+.button-green-sm:hover {
+  color: #ffffff;
+}
+.button-green-sm::before {
+  background-color: #892441;
+  border-radius: 0 0 100% 100%;
+  height: 200%;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: -200%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  width: 100%;
+  z-index: -1;
+}
+.button-green-sm:hover::before {
+  top: 0;
+}
+.button-green-sm:active {
+  background-color: #6a152d;
+  background-color: #ffffff;
+  content: "";
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .button-green-rouded {
   border-radius: 2rem;
   padding: 0.6rem 2rem;
@@ -14598,7 +14639,6 @@ template {
   display: inline-block;
   text-align: center;
   padding: 0.69rem;
-  border: solid white 0.25rem !important;
   border-radius: 2rem;
   padding: 0.6rem 2rem;
   position: relative;
@@ -14614,6 +14654,7 @@ template {
   padding: 0;
   overflow: hidden;
   z-index: 1;
+  border: solid white 0.25rem;
 }
 .button-white-rouded:hover {
   color: #ffffff;
@@ -14640,6 +14681,20 @@ template {
   content: "";
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.button-border {
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1.5rem;
+  min-height: 4rem;
+  -webkit-transition: border-color 0.3s ease-out;
+  transition: border-color 0.3s ease-out;
+}
+
+.button-border:hover {
+  border: 0.25rem solid white;
 }
 
 .card-btn-green {
@@ -14951,7 +15006,7 @@ body {
   background-color: #23755c;
   color: #ffffff;
   border-radius: 3rem;
-  padding: 0 0 0 0;
+  padding: 0rem 0.2rem 0 2rem;
   margin-top: 2.5rem;
 }
 
@@ -15009,6 +15064,7 @@ footer ul li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15035,7 +15091,7 @@ a {
 }
 
 .text-green {
-  color: #23755c;
+  color: #309674;
 }
 
 .text-wine {

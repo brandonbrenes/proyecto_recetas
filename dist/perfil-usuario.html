@@ -12,13 +12,15 @@
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+    <!-- remixincon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body class="curve" id="app">
-    <!-- Fin nav -->
-    <nav class="container navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-4 me-4" href="index.html">
+    <!-- Inicio header -->
+    <header class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand me-4" href="index.html">
                 <img src="images/logo.svg" alt="logo" width="100">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -61,77 +63,79 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
-                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html">
+                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html" title="perfil">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- Fin nav -->
+        </nav>
+    </header>
+    <!-- Fin header -->
 
-    <!-- sección imagen/texto   -->
-    <!-- <section class="mt-5 p-5  rounded-4 container" id="about">
-        <div class="row justify-content-around ">
-            <div class="col rounded-3 m-3">
-                <div class="m-5 text-center p-2 bg-light rounded-3">
-                    <div class="bg-black bg-opacity-50 rounded-4 p-5 text-center">
-                        <label for="exampleFormControlFile1">Subir imagen</label>
-                    </div>
-                    <div class="p-3">
-                        <input type="file" class="form-control p-0" id="exampleFormControlFile1">
-                    </div>
-                    <div>
-                        <input class="btn-br w-50" type="submit" value="Guardar" id="guardar">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col bg-green bg-opacity-50 rounded-3">
-                <div class="container">
-                    <div>
-                        <div class="container text-light mt-4">
-                            <div class="text-center">
-                                <h2 class="text-light">Usuario</h2>
-                                <hr />
-                            </div>
-                            <div class="text-light">
-                                <h3>Nombre:</h3>
-                                <p>espacio donde se loggea el nombre de la base</p>
-                                <h3>Correo:</h3>
-                                <p>espacio donde se loggea el correo de la base</p>
-                                <h3>Cantidad de recetas: </h3>
-                                <p>8</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- sección imagen/texto   -->
-
-    <header class="mt-xl-5 text-center">
+    <!-- Sección con la foto e info del usuario -->
+    <section class="mt-xl-5 text-center">
         <div class="d-flex flex-column align-items-center">
-            <h1>Brandon Josué Brenes Arias</h1>
-            <h3 class="fs-sm text-white">@brandonbrenes</h3>
+            <h1>Brandon Josue Brenes</h1>
+            <h3 class="fs-sm text-white">@bran</h3>
         </div>
         <div class="d-flex justify-content-center">
-            <div class="imagen-contenedor">
-                <img class="img-usuario img-fluid" src="images/IMG_20210408_013058.jpg" alt="">
+            <div class="foto-usuario">
+                <div class="foto-container">
+                    <img src="images/IMG_20210408_013058.jpg" alt="Foto usuario" id="foto_grande">
+                </div>
+                <button type="button" class="card-btn-green button-border ver-mas" title="Ver más"
+                    data-bs-toggle="modal" data-bs-target="#modalInfoUsuario">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
             </div>
         </div>
-    </header>
+
+        <div class="modal fade" id="modalInfoUsuario" tabindex="-1" aria-labelledby="modalInfoUsuarioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title ms-4 fs-xsm" id="modalInfoUsuarioLabel">Información de usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Salir sin guardar"></button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="text-start m-auto ms-4 col-md-8">
+                            <h3 class="text-green fs-med mb-4">Brandon Josue Brenes</h3>
+                            <p class="fs-sm" id="nombre_usuario">@bran</p>
+                            <p class="fs-sm" id="correo">brandon@gmail.com</p>
+                            <p class="fs-sm">Recetas guardadas: <span id="numero de recetas">16</span></p>
+                        </div>
+                        <div class="foto-usuario-sm d-flex m-auto mt-4 col-sm-1">
+                            <div class="foto-container">
+                                <img src="images/IMG_20210408_013058.jpg" alt="foto usuario" id="foto_usuario">
+                            </div>
+                            <button type="button" class="card-btn-green cambiar-foto">
+                                <label for="archivo">
+                                  <input type="file" id="archivo" class="sr-only" accept="image/*">
+                                  <i class="fa-solid fa-pen"></i>
+                                  <!-- <i class="mb-1 ms-1 fa-regular fa-pen-to-square"></i> -->
+                                </label>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn button-green-sm m-auto">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal -->
+    </section>
+    <!-- Sección con la foto e info del usuario -->
 
     <!--Recetas guardadas-->
     <main class="container">
         <h2 class="text-center text-black">Recetas coleccionadas</h2>
-        <div class="dropdown">
+        <div class="dropdown d-flex justify-content-end">
             <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <i class="ri-equalizer-line"></i>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu fs-4">
                 <li><button class="dropdown-item" type="button">Comida rápida</button></li>
                 <li><button class="dropdown-item" type="button">Desayunos</button></li>
                 <li><button class="dropdown-item" type="button">Almuerzos</button></li>
@@ -219,6 +223,12 @@
     </footer>
     <!-- fin footer -->
 
+    <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- Fin Boostrap JS -->
+
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- VueJS -->
@@ -230,6 +240,8 @@
         const countedApp = app.mount("#app");
     </script>
     <!-- mounted app-->
+
+    <script src="js/cambiar_foto.js"></script>
 </body>
 
 </html>
