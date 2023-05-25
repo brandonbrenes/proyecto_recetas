@@ -7,227 +7,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gusticos</title>
 
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/recipe.css">
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
-    <!-- remixincon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Fin nav -->
-    <nav class=" container navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+<body class="curve" id="app">
+    <!-- Fin header -->
+    <header class="container">
+        <!-- Inicio nav -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand me-4" href="index.html">
                 <img src="images/logo.svg" alt="logo" width="100">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="fa-solid fa-bars-sort"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item text-light">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="./registro.html">Registro</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categorías
-                        </a>
-                        <ul class="dropdown-menu fs-4">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Login</a>
                     </li>
+                    <li class="cuadro-seleccion"></li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
-                        aria-label="Search">
-                    <button class="button-green-rouded" type="submit" title="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <button class="button-white-rouded" type="button" title="usuario">
+                <div class="d-flex m-2">
+                    <form class="d-flex" role="search">
+                        <div class=" dropdown m-auto">
+                            <a class="nav-link dropdown-toggle me-3" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                filtro
+                            </a>
+                            <ul class="dropdown-menu fs-4">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
+                            aria-label="Search">
+                        <button class="button-green-rouded" type="submit" title="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html" title="perfil">
                         <i class="fa-solid fa-user"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <!-- Fin nav -->
-
-    <!-- inicio header -->
-    <header>
-        <div class="container">
-            <div class="row mt-5">
-
-                <div class="m-auto col-md-6">
-                    <div>
-                        
-                    </div>
+                    </a>
                 </div>
             </div>
-        </div>
+        </nav>
+        <!-- Fin nav -->
     </header>
-    <!-- inicio fin header -->
+    <!-- Fin header -->
 
-    <!-- inicio main -->
-    <main>
-        <!-- Sección todas las recetas -->
-        <section class="container-xxl row">
-            <div class="col-lg-9">
-                <h1 class="text-center">Pizza</h1>
-                <img class="img-fluid mx-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
-
-                <h2 class="text-center">Tiempo de cocción</h2>
-                <h3>Descripción</h3>
-                <p>Aquí debería de ir toda la información de la receta</p>
-            </div>
-            <div class="col-sm-3">
-                <h3 class="text-center">También te podrían interesar</h3>
-                <div class="row p-4">
-                    <div class="card rounded-5 shadow-lg">
-                        <div style="height: 0; padding-bottom: 100%; position: relative;">
-                            <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                alt="Imagen de la receta">
-                        </div>
-                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                        <div class="card-body ">
-                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
-                            <h3 class="card-title">Pizza</h3>
-                            <p class="card-text">Breve descripción de la receta</p>
-                            <!-- <div class="position-relative">
-                                        <button type="button" class="btn btn-primary position-absolute"
-                                            style="top: -44rem; right: 10px;">
-                                            <i class="far fa-bookmark"></i> Guardar
-                                        </button>
-                                    </div> -->
-                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
-                                <div class="justify-content-start row">
-                                    <button type="button" class="card-btn-green col" title="Like">
-                                        <i class="fas fa-heart"></i>
-                                    </button>
-                                    <p class="col m-auto">12</p>
-                                </div>
-                                <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Inicio main -->
+    <main class="container text-center">
+        <section class="d-flex justify-content-center row">
+            <h1 class="text-green">Big Mac</h1>
+            <div class="img-container">
+                <div class="img-receta">
+                    <img src="images/tranding-food-1.png" alt="Imagen receta">
                 </div>
-                <div class="row p-4">
-                    <div class="card rounded-5 shadow-lg">
-                        <div style="height: 0; padding-bottom: 100%; position: relative;">
-                            <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                alt="Imagen de la receta">
-                        </div>
-                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                        <div class="card-body ">
-                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
-                            <h3 class="card-title">Pizza</h3>
-                            <p class="card-text">Breve descripción de la receta</p>
-                            <!-- <div class="position-relative">
-                                        <button type="button" class="btn btn-primary position-absolute"
-                                            style="top: -44rem; right: 10px;">
-                                            <i class="far fa-bookmark"></i> Guardar
-                                        </button>
-                                    </div> -->
-                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
-                                <div class="justify-content-start row">
-                                    <button type="button" class="card-btn-green col" title="Like">
-                                        <i class="fas fa-heart"></i>
-                                    </button>
-                                    <p class="col m-auto">12</p>
-                                </div>
-                                <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row p-4">
-                    <div class="card rounded-5 shadow-lg">
-                        <div style="height: 0; padding-bottom: 100%; position: relative;">
-                            <img src="images/tranding-food-1.png" class="rounded-top-5"
-                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-                                alt="Imagen de la receta">
-                        </div>
-                        <!-- <img src="images/tranding-food-1.png" class="card-img-top rounded-top-5" alt="Imagen de la receta"> -->
-                        <div class="card-body ">
-                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
-                            <h3 class="card-title">Pizza</h3>
-                            <p class="card-text">Breve descripción de la receta</p>
-                            <!-- <div class="position-relative">
-                                        <button type="button" class="btn btn-primary position-absolute"
-                                            style="top: -44rem; right: 10px;">
-                                            <i class="far fa-bookmark"></i> Guardar
-                                        </button>
-                                    </div> -->
-                            <div class="card-footer d-flex justify-content-between p-5 pt-3 pb-3">
-                                <div class="justify-content-start row">
-                                    <button type="button" class="card-btn-green col" title="Like">
-                                        <i class="fas fa-heart"></i>
-                                    </button>
-                                    <p class="col m-auto">12</p>
-                                </div>
-                                <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
+                <div class="botones-receta">
+                    <div class="d-grid">
+                        <button type="button" class="card-btn-green button-border mb-4" title="Guardar">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                        <button type="button" class="card-btn-green button-border" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="app"></div>
+        <section class="mb-5">
+            <h2 class="text-green mb-4">Ingredientes</h2>
+            <div class="cuadro-texto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quidem ducimus delectus dignissimos
+                    alias aliquid, sit perferendis dicta magnam nostrum. Et magnam, quae ex pariatur quos blanditiis
+                    cumque sequi repudiandae?</p>
+            </div>
+        </section>
+        <section class="mt-5 mb-5">
+            <h2 class="text-green mb-4">Instrucciones</h2>
+            <div class="cuadro-texto">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa sit minima exercitationem
+                    sequi? Sed molestias veniam eos sapiente, reprehenderit voluptas dolor minus, sit id officiis
+                    officia facilis molestiae laudantium vel eum, qui quisquam quia numquam aliquid. Perspiciatis
+                    excepturi veritatis rerum tenetur id obcaecati iste autem quibusdam deserunt, modi non quos neque
+                    voluptatibus nihil tempore in unde distinctio vero quisquam officia, odio libero! Id esse explicabo
+                    porro provident autem dignissimos temporibus maiores modi est ex necessitatibus blanditiis aperiam
+                    culpa mollitia facilis architecto, molestiae et facere in fugit? Numquam reiciendis facilis facere
+                    aliquid est saepe non possimus vel sunt ad sed maxime, optio dolor, a animi in laborum quidem eos at
+                    omnis eum recusandae, fugiat tenetur exercitationem? Repellat deleniti vitae autem quia nemo ratione
+                    cum, nobis illo quod odit incidunt quaerat pariatur. Pariatur impedit atque rem maxime unde ab
+                    provident accusamus vero sint deleniti aspernatur veniam saepe dolores beatae asperiores sapiente,
+                    corporis delectus nesciunt blanditiis nulla nostrum numquam itaque esse officia! Cupiditate eius
+                    aspernatur maiores veritatis deleniti fugit voluptates consequuntur soluta eaque nam exercitationem
+                    praesentium, sequi ab ratione necessitatibus magni quae ipsum dolores architecto debitis molestias
+                    quisquam nesciunt ipsam animi! Sequi laboriosam, animi repellendus totam quasi nemo provident
+                    deleniti! Obcaecati, amet!</p>
+            </div>
+        </section>
     </main>
-    <!-- inicio main -->
+    <!-- Fin main -->
 
     <!-- inicio fin footer -->
     <footer>
-        <div class="container d-flex justify-content-center p-0">
+        <div class="container d-flex justify-content-center">
             <ul class="row">
                 <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Facebook" class="button-white-rouded mx-2 p-md-2">
+                        title="Facebook" class="button-white-rouded p-md-2 pt-2">
                         <i class="fab fa-facebook-f min-w-20 text-center"></i>
                     </a>
                 </li>
                 <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Youtube" class="button-white-rouded mx-2 p-md-2">
+                        title="Youtube" class="button-white-rouded p-md-2 pt-2">
                         <i class="fab fa-youtube min-w-20 text-center"></i>
                     </a>
                 </li>
                 <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Instagram" class="button-white-rouded mx-2 p-md-2">
+                        title="Instagram" class="button-white-rouded p-md-2 pt-2">
                         <i class="fab fa-instagram min-w-20 text-center"> </i>
                     </a>
                 </li>
                 <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Twitter" class="button-white-rouded mx-2 p-md-2">
+                        title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
                         <i class="fab fa-twitter min-w-20 text-center"> </i>
                     </a>
                 </li>
@@ -240,13 +157,6 @@
     </footer>
     <!-- inicio fin footer -->
 
-    <!-- Slider JS -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/slider.js"></script>
-    <!-- Slider JS -->
-
     <!-- BS JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -256,6 +166,7 @@
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- VueJS -->
+
     <!-- main js -->
     <script src="./js/main.js"></script>
     <!-- main js -->
@@ -265,6 +176,8 @@
         const countedApp = app.mount("#app");
     </script>
     <!-- mounted app-->
+
+
 </body>
 
 </html>

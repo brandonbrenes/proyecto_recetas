@@ -16,13 +16,13 @@
     }
 }
 
-.likes-number {
+.likes-number{
     position: relative;
 
     p {
         position: absolute;
         top: 2rem;
-        left: 5.2rem;
+        left: 6rem;
     }
 
     @include media-queries.respond-to('(min-width: 768px) and (max-width: 1199px)') {

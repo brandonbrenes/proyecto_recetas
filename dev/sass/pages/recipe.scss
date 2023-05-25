@@ -1,0 +1,74 @@
+@use '../abstracts/variables';
+@use '../abstracts/media-queries';
+
+h1 {
+    color: variables.$clr-green-light;
+    margin: 4rem 0 0 0 !important;
+}
+
+.curve {
+    height: 60rem;
+    width: 100%;
+
+    background-image: url(../..//images/curva_receta.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    @include media-queries.respond-to('(min-width: 10x) and (max-width: 1200px)'){
+        height: 60rem;
+    }
+
+    @include media-queries.respond-to('(min-width: 1300px) and (max-width: 1490px)'){
+        height: 50rem;
+    }
+
+    @include media-queries.respond-to('(min-width: 1490px) and (max-width: 2000px)'){
+        height: 40rem;
+    }
+}
+
+.img-container {
+    position: relative;
+    margin: 5rem 2rem 12rem 2rem;
+    width: 32rem;
+    height: 32rem;
+}
+
+.img-receta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;/* Mantener la relación de aspecto 1:1 */
+    border-radius: 2rem;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;/*evita que la imagen se achique*/
+    }
+}
+
+.botones-receta{
+    position: absolute;
+    bottom: 1.2rem;
+    right: 2rem;
+    transition: all 0.5s ease;
+
+    @include media-queries.respond-to('(min-width: 480px)'){
+        bottom: 0;
+        right: -6rem;
+    }
+}
+
+.cuadro-texto{
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: variables.$clr-wine;
+    color: variables.$clr-white;
+    font-size: variables.$fs-sm;
+}

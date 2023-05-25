@@ -22,8 +22,6 @@ h1 {
 
 .foto-container {
   position: relative;
-  width: 100%;
-  height: 0;
   padding-bottom: 100%; /* Mantener la relación de aspecto 1:1 */
   border-radius: 50%;
   overflow: hidden;
@@ -41,8 +39,8 @@ h1 {
 .foto-usuario-sm {
   position: relative;
   margin: 5rem 2rem 12rem 2rem;
-  width: 15rem;
-  height: 15rem;
+  width: 17rem;
+  height: 17rem;
 }
 
 .ver-mas {
@@ -51,10 +49,10 @@ h1 {
   left: 95%;
 }
 
-.cambiar-foto {
+.btn-cambiar-foto {
   position: absolute;
-  top: 10rem;
-  left: 11rem;
+  top: 11.5rem;
+  left: 12rem;
 }
 
 /*.imagen-usuario {
