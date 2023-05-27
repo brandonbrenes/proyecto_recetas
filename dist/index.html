@@ -52,12 +52,7 @@
                                 filtro
                             </a>
                             <ul class="dropdown-menu fs-4">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li v-for="category in categories" :key="category" class="dropdown-item">{{ category }}</li>
                             </ul>
                         </div>
                         <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
@@ -280,10 +275,10 @@
                     <i class="ri-equalizer-line"></i>
                 </button>
                 <ul class="dropdown-menu fs-4">
-                    <li><button class="dropdown-item" type="button">Comida rápida</button></li>
-                    <li><button class="dropdown-item" type="button">Desayunos</button></li>
+                    <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{ category }}</button></li>
+                    <!-- <li><button class="dropdown-item" type="button">Desayunos</button></li>
                     <li><button class="dropdown-item" type="button">Almuerzos</button></li>
-                    <li><button class="dropdown-item" type="button">Bebidas</button></li>
+                    <li><button class="dropdown-item" type="button">Bebidas</button></li> -->
                 </ul>
             </div>
             <div class="row">
@@ -365,7 +360,7 @@
     <script src="./js/main.js"></script>
     <script src="./js/components/RecipeCard.js"></script>
     <script src="js/components/RecipePage.js"></script>
-    <script src="js/router.js"></script>
+    <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
 
     <!-- mounted app-->

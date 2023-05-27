@@ -138,10 +138,7 @@
                 <i class="ri-equalizer-line"></i>
             </button>
             <ul class="dropdown-menu fs-4">
-                <li><button class="dropdown-item" type="button">Comida rápida</button></li>
-                <li><button class="dropdown-item" type="button">Desayunos</button></li>
-                <li><button class="dropdown-item" type="button">Almuerzos</button></li>
-                <li><button class="dropdown-item" type="button">Bebidas</button></li>
+                <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{ category }}</button></li>
             </ul>
         </div>
         <div class="row">
@@ -230,10 +227,20 @@
 
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- VueJS -->
-    <!-- main js -->
+
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    
+    <!-- main js y componentes -->
     <script src="./js/main.js"></script>
+    <script src="./js/components/RecipeCard.js"></script>
+    <script src="js/components/RecipePage.js"></script>
+    <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
+
     <!-- mounted app-->
     <script>
         const countedApp = app.mount("#app");
