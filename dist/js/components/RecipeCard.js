@@ -34,16 +34,11 @@ app.component("recipe-card", {
             );
 
     },
-    methods:{
-        onClicKViewRecipe() {
-            this.$emit('recipedetails', this.id);
-        }
-    },
     template:
         /*html*/
         `<div class="card rounded-5 shadow-lg">
             <div class="card-img-container">
-            <a href="receta.html" v-on:recipedetails="onClicRecipeDetails()"><img v-bind:src="image" class="rounded-top-5" alt="Imagen de la receta"></a>
+            <a :href="'receta.html?id=' + id"><img v-bind:src="image" class="rounded-top-5" alt="Imagen de la receta"></a>
             </div>
             <div class="card-body ">
                 <h4 class="card-subtitle mb-2 text-muted">{{category}}</h4>

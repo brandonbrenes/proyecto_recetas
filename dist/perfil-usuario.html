@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
     <!-- remixincon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
 </head>
 
 <body class="curve" id="app">
@@ -104,7 +105,7 @@
                             <h3 class="text-green fs-med mb-4">Brandon Josue Brenes</h3>
                             <p class="fs-sm" id="nombre_usuario">@bran</p>
                             <p class="fs-sm" id="correo">brandon@gmail.com</p>
-                            <p class="fs-sm">Recetas guardadas: <span id="numero de recetas">16</span></p>
+                            <p class="fs-sm">Recetas guardadas: <span id="numero de recetas">{{recetasColeccionadas.length}}</span></p>
                         </div>
                         <div class="foto-usuario-sm d-flex m-auto mt-4 col-sm-1">
                             <div class="foto-container">
@@ -143,34 +144,8 @@
         </div>
         <div class="row">
             <!-- Tarjetas recetas -->
-            <div v-for="num in 12" class="col-md-3 p-4">
-                <div class="card rounded-5 shadow-lg">
-                    <div class="card-img-container">
-                        <img src="images/tranding-food-1.png" class="rounded-top-5" alt="Imagen de la receta">
-                    </div>
-                    <div class="card-body ">
-                        <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
-                        <h3 class="card-title">Pizza</h3>
-                        <p class="card-text">Breve descripción de la receta</p>
-
-                        <div>
-                            <div class="likes-number">
-                                <p>120</p>
-                            </div>
-                            <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-3">
-                                <button type="button" class="card-btn-green" title="Like">
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                                <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                                <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div v-for="(id) in recetasColeccionadas" class="col-md-3 p-4">
+                <recipe-card :id="id" recipedetails="openRecipePage"></recipe-card>
             </div>
         </div>
         <!-- Botones prev y next -->

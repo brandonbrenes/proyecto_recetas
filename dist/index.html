@@ -15,6 +15,9 @@
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
     <!-- remixincon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
 </head>
 
 <body class="curve" id="app">
@@ -52,7 +55,8 @@
                                 filtro
                             </a>
                             <ul class="dropdown-menu fs-4">
-                                <li v-for="category in categories" :key="category" class="dropdown-item">{{ category }}</li>
+                                <li v-for="category in categories" :key="category" class="dropdown-item">{{ category }}
+                                </li>
                             </ul>
                         </div>
                         <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
@@ -92,7 +96,7 @@
     <!-- inicio main -->
     <main>
         <!-- Carrusel Más votadas-->
-        
+
         <section id="tranding">
             <h2 class="text-center text-light">Recetas más votadas</h2>
 
@@ -275,7 +279,8 @@
                     <i class="ri-equalizer-line"></i>
                 </button>
                 <ul class="dropdown-menu fs-4">
-                    <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{ category }}</button></li>
+                    <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{
+                            category }}</button></li>
                     <!-- <li><button class="dropdown-item" type="button">Desayunos</button></li>
                     <li><button class="dropdown-item" type="button">Almuerzos</button></li>
                     <li><button class="dropdown-item" type="button">Bebidas</button></li> -->
@@ -283,8 +288,8 @@
             </div>
             <div class="row">
                 <!-- Tarjetas recetas -->
-                <div v-for="(id, index) in recipesIds" class="col-md-3 p-4">
-                    <recipe-card :id="id" recipedetails="openRecipePage"></recipe-card>
+                <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
+                    <recipe-card :id="recipeId"></recipe-card>
                 </div>
             </div>
             <!-- Botones prev y next -->
@@ -347,19 +352,18 @@
         crossorigin="anonymous"></script>
     <!-- BS JS -->
 
-    <!-- VueJS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 
     <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
-    
+    <!-- <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script> -->
+
     <!-- main js y componentes -->
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="./js/components/RecipeCard.js"></script>
-    <script src="js/components/RecipePage.js"></script>
+    <script src="./js/components/RecipePage.js"></script>
     <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
 
@@ -368,8 +372,6 @@
         const countedApp = app.mount("#app");
     </script>
     <!-- mounted app-->
-
-
 </body>
 
 </html>

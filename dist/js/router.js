@@ -1,18 +1,26 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './components/main.js';
+import RecipeCard from './components/RecipeCard.js';
 
-import RecipePage from './components/RecipePage';
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/receta',
-    name: 'RecipePage',
-    component: RecipePage
+    path: '/',
+    name: 'main',
+    component: App
+  },
+  {
+    path: '/recipe/:id',
+    name: 'Recipe',
+    component: RecipeCard,
+    props: true
   }
-]
+];
 
-const router = createRouter({
-  history: createWebHistory(),
+const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;
