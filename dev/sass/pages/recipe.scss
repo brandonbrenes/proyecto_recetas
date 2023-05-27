@@ -3,11 +3,11 @@
 
 h1 {
     color: variables.$clr-green-light;
-    margin: 4rem 0 0 0 !important;
+    margin: 3rem 0 3rem 0 !important;
 }
 
 .curve {
-    height: 60rem;
+    height: 61rem;
     width: 100%;
 
     background-image: url(../..//images/curva_receta.svg);
@@ -30,9 +30,9 @@ h1 {
 
 .img-container {
     position: relative;
-    margin: 5rem 2rem 12rem 2rem;
-    width: 32rem;
-    height: 32rem;
+    margin: 0rem 2rem 15rem 2rem;
+    width: 35rem;
+    height: 35rem;
 }
 
 .img-receta {
@@ -59,10 +59,15 @@ h1 {
     right: 2rem;
     transition: all 0.5s ease;
 
-    @include media-queries.respond-to('(min-width: 480px)'){
-        bottom: 0;
+    @include media-queries.respond-to('(min-width: 535px)'){
+        bottom: 1rem;
         right: -6rem;
     }
+}
+
+button{
+    padding-left: 0.1rem!important;
+    padding-top: 0.1rem!important;
 }
 
 .cuadro-texto{
@@ -71,4 +76,10 @@ h1 {
     background-color: variables.$clr-wine;
     color: variables.$clr-white;
     font-size: variables.$fs-sm;
+}
+
+.cuadros-container{
+    position: absolute;
+    top: 65rem;
+    width: 100%;
 }

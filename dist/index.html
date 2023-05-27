@@ -77,7 +77,6 @@
         <!-- Sección con eslogan e imagen -->
         <section>
             <div class="row mt-5">
-
                 <div class="m-auto col-md-6">
                     <div>
                         <div class="justify-content-center">
@@ -98,13 +97,13 @@
     <!-- inicio main -->
     <main>
         <!-- Carrusel Más votadas-->
+        
         <section id="tranding">
             <h2 class="text-center text-light">Recetas más votadas</h2>
 
             <div class="mt-lg-5 container-fluid bg-wine pb-4">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-1.png" alt="Tranding">
@@ -120,8 +119,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-2.png" alt="Tranding">
@@ -145,8 +142,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-3.png" alt="Tranding">
@@ -170,8 +165,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-4.png" alt="Tranding">
@@ -195,8 +188,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-5.png" alt="Tranding">
@@ -220,8 +211,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-6.png" alt="Tranding">
@@ -245,8 +234,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-7.png" alt="Tranding">
@@ -283,7 +270,6 @@
                 </div>
             </div>
         </section>
-        <!-- End Carrusel -->
 
         <!-- Sección todas las recetas -->
         <section class="container">
@@ -302,34 +288,8 @@
             </div>
             <div class="row">
                 <!-- Tarjetas recetas -->
-                <div v-for="num in 16" class="col-md-3 p-4">
-                    <div class="card rounded-5 shadow-lg">
-                        <div class="card-img-container">
-                            <img src="images/tranding-food-1.png" class="rounded-top-5" alt="Imagen de la receta">
-                        </div>
-                        <div class="card-body ">
-                            <h4 class="card-subtitle mb-2 text-muted">Comida rápida</h4>
-                            <h3 class="card-title">Pizza</h3>
-                            <p class="card-text">Breve descripción de la receta</p>
-
-                            <div>
-                                <div class="likes-number">
-                                    <p>120</p>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-3">
-                                    <button type="button" class="card-btn-green col" title="Like">
-                                        <i class="fas fa-heart"></i>
-                                    </button>
-                                    <button type="button" class="card-btn-green justify-content-center" title="Like">
-                                        <i class="far fa-bookmark"></i>
-                                    </button>
-                                    <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div v-for="(id, index) in recipesIds" class="col-md-3 p-4">
+                    <recipe-card :id="id" recipedetails="openRecipePage"></recipe-card>
                 </div>
             </div>
             <!-- Botones prev y next -->
@@ -394,15 +354,27 @@
 
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- VueJS -->
-    <!-- main js -->
+
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    
+    <!-- main js y componentes -->
     <script src="./js/main.js"></script>
+    <script src="./js/components/RecipeCard.js"></script>
+    <script src="js/components/RecipePage.js"></script>
+    <script src="js/router.js"></script>
     <!-- main js -->
+
     <!-- mounted app-->
     <script>
         const countedApp = app.mount("#app");
     </script>
     <!-- mounted app-->
+
+
 </body>
 
 </html>

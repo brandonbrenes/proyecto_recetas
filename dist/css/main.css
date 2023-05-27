@@ -15052,6 +15052,7 @@ body {
 footer {
   background-color: #23755c;
   padding: 2rem;
+  width: 100%;
 }
 footer ul {
   list-style-type: none;

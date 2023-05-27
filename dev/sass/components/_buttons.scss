@@ -7,13 +7,11 @@
     min-width: 12rem;
     padding: auto;
     border: none;
-    
 }
 
 .button-green-sm{
     @include mixins.button(variables.$clr-green, variables.$clr-white, false, true);
     font-size: variables.$fs-xxxsm;
-
 }
 
 .button-green-rouded{

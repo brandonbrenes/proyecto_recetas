@@ -1,11 +1,11 @@
 @charset "UTF-8";
 h1 {
   color: #309674;
-  margin: 4rem 0 0 0 !important;
+  margin: 3rem 0 3rem 0 !important;
 }
 
 .curve {
-  height: 60rem;
+  height: 61rem;
   width: 100%;
   background-image: url(../..//images/curva_receta.svg);
   background-size: cover;
@@ -30,9 +30,9 @@ h1 {
 
 .img-container {
   position: relative;
-  margin: 5rem 2rem 12rem 2rem;
-  width: 32rem;
-  height: 32rem;
+  margin: 0rem 2rem 15rem 2rem;
+  width: 35rem;
+  height: 35rem;
 }
 
 .img-receta {
@@ -60,11 +60,16 @@ h1 {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 535px) {
   .botones-receta {
-    bottom: 0;
+    bottom: 1rem;
     right: -6rem;
   }
+}
+
+button {
+  padding-left: 0.1rem !important;
+  padding-top: 0.1rem !important;
 }
 
 .cuadro-texto {
@@ -73,4 +78,10 @@ h1 {
   background-color: #892441;
   color: #ffffff;
   font-size: 1.875rem;
+}
+
+.cuadros-container {
+  position: absolute;
+  top: 65rem;
+  width: 100%;
 }

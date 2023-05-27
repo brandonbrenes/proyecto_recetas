@@ -72,90 +72,7 @@
     </header>
     <!-- Fin header -->
 
-    <!-- Inicio main -->
-    <main class="container text-center">
-        <section class="d-flex justify-content-center row">
-            <h1 class="text-green">Big Mac</h1>
-            <div class="img-container">
-                <div class="img-receta">
-                    <img src="images/tranding-food-1.png" alt="Imagen receta">
-                </div>
-                <div class="botones-receta">
-                    <div class="d-grid">
-                        <button type="button" class="card-btn-green button-border mb-4" title="Guardar">
-                            <i class="far fa-bookmark"></i>
-                        </button>
-                        <button type="button" class="card-btn-green button-border" title="Like">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="mb-5">
-            <h2 class="text-green mb-4">Ingredientes</h2>
-            <div class="cuadro-texto">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quidem ducimus delectus dignissimos
-                    alias aliquid, sit perferendis dicta magnam nostrum. Et magnam, quae ex pariatur quos blanditiis
-                    cumque sequi repudiandae?</p>
-            </div>
-        </section>
-        <section class="mt-5 mb-5">
-            <h2 class="text-green mb-4">Instrucciones</h2>
-            <div class="cuadro-texto">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa sit minima exercitationem
-                    sequi? Sed molestias veniam eos sapiente, reprehenderit voluptas dolor minus, sit id officiis
-                    officia facilis molestiae laudantium vel eum, qui quisquam quia numquam aliquid. Perspiciatis
-                    excepturi veritatis rerum tenetur id obcaecati iste autem quibusdam deserunt, modi non quos neque
-                    voluptatibus nihil tempore in unde distinctio vero quisquam officia, odio libero! Id esse explicabo
-                    porro provident autem dignissimos temporibus maiores modi est ex necessitatibus blanditiis aperiam
-                    culpa mollitia facilis architecto, molestiae et facere in fugit? Numquam reiciendis facilis facere
-                    aliquid est saepe non possimus vel sunt ad sed maxime, optio dolor, a animi in laborum quidem eos at
-                    omnis eum recusandae, fugiat tenetur exercitationem? Repellat deleniti vitae autem quia nemo ratione
-                    cum, nobis illo quod odit incidunt quaerat pariatur. Pariatur impedit atque rem maxime unde ab
-                    provident accusamus vero sint deleniti aspernatur veniam saepe dolores beatae asperiores sapiente,
-                    corporis delectus nesciunt blanditiis nulla nostrum numquam itaque esse officia! Cupiditate eius
-                    aspernatur maiores veritatis deleniti fugit voluptates consequuntur soluta eaque nam exercitationem
-                    praesentium, sequi ab ratione necessitatibus magni quae ipsum dolores architecto debitis molestias
-                    quisquam nesciunt ipsam animi! Sequi laboriosam, animi repellendus totam quasi nemo provident
-                    deleniti! Obcaecati, amet!</p>
-            </div>
-        </section>
-    </main>
-    <!-- Fin main -->
-
-    <!-- inicio fin footer -->
-    <footer>
-        <div class="container d-flex justify-content-center">
-            <ul class="row">
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Facebook" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-facebook-f min-w-20 text-center"></i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Youtube" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-youtube min-w-20 text-center"></i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Instagram" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-instagram min-w-20 text-center"> </i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
-                        <i class="fab fa-twitter min-w-20 text-center"> </i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="text-center text-white">
-            ©2023 Copyright:
-            <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
-        </div>
-    </footer>
-    <!-- inicio fin footer -->
+    <recipe-page :id="selectedId"></recipe-page>
 
     <!-- BS JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -166,9 +83,19 @@
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- VueJS -->
+    
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
 
-    <!-- main js -->
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Axios -->
+
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+
+    <!-- main js y componentes -->
     <script src="./js/main.js"></script>
+    <script src="./js/components/RecipeCard.js"></script>
+    <script src="js/components/RecipePage.js"></script>
     <!-- main js -->
 
     <!-- mounted app-->
@@ -176,8 +103,6 @@
         const countedApp = app.mount("#app");
     </script>
     <!-- mounted app-->
-
-
 </body>
 
 </html>
