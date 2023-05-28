@@ -1,5 +1,27 @@
 @use '../abstracts/media-queries';
 
+%header-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-header {
+    padding: 0;
+    padding-bottom: .7rem;
+
+    h3 {
+        @extend %header-text;
+        -webkit-line-clamp: 1;
+    }
+
+    p {
+        @extend %header-text;
+        -webkit-line-clamp: 1;
+    }
+}
+
 .card-img-container {
     height: 0;
     padding-bottom: 100%;
@@ -16,7 +38,7 @@
     }
 }
 
-.likes-number{
+.likes-number {
     position: relative;
 
     p {
@@ -25,7 +47,7 @@
         left: 6rem;
     }
 
-    @include media-queries.respond-to('(min-width: 768px) and (max-width: 1199px)') {
+    @include media-queries.respond-to('(min-width: 768px) and (max-width: 991.5px)') {
         display: none;
     }
 }

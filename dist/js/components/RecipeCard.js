@@ -10,7 +10,7 @@ app.component("recipe-card", {
             image: "",
             category: "",
             name: "",
-            description: "Short descripción"
+            description: "Esta descripción es muy larga para hacer la prueba"
         }
     },
     mounted() {
@@ -40,25 +40,26 @@ app.component("recipe-card", {
             <div class="card-img-container">
             <a :href="'receta.html?id=' + id"><img v-bind:src="image" class="rounded-top-5" alt="Imagen de la receta"></a>
             </div>
-            <div class="card-body ">
+            <div class="card-body">
                 <h4 class="card-subtitle mb-2 text-muted">{{category}}</h4>
-                <h3 class="card-title">{{name}}</h3>
-                <p class="card-text">{{description}}</p>
-
+                <div class="card-header">
+                    <h3 class="card-title">{{name}}</h3>
+                    <p class="card-text">{{description}}</p>
+                </div>
                 <div>
                     <div class="likes-number">
                         <p>{{likes_number}}</p>
                     </div>
-                    <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-3">
+                    <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-2">
                         <button type="button" class="card-btn-green" title="Like">
                             <i class="fas fa-heart"></i>
                         </button>
                         <button type="button" class="card-btn-green justify-content-center" title="Like">
                             <i class="far fa-bookmark"></i>
                         </button>
-                        <button type="button" class="card-btn-green justify-content-end" title="Ver más">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </button>
+                        <!-- <button type="button" class="card-btn-green justify-content-end" title="Ver más">
+                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>-->
                     </div>
                 </div>
             </div>
