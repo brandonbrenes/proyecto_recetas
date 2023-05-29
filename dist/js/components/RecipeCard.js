@@ -2,10 +2,20 @@ app.component("recipe-card", {
     props: {
         id: {
             type: String
+        },
+        liked: {
+            type: Boolean,
+            default: false
+        },
+        saved: {
+            type:  Boolean,
+            default: false
         }
     },
     data() {
         return {
+            isLiked: this.liked,
+            isSaved: this.saved,
             likes_number: 0,
             image: "",
             category: "",
@@ -34,6 +44,24 @@ app.component("recipe-card", {
             );
 
     },
+    methods: {
+        onClickLike() {
+            if (this.isLiked) {
+                this.likes_number--;
+                this.isLiked = false;
+            } else {
+                this.likes_number++;
+                this.isLiked = true;
+            }
+        },
+        onClickSave() {
+            if (this.isSaved) {
+                this.isSaved = false;
+            } else {
+                this.isSaved = true;
+            }
+        }
+    },
     template:
         /*html*/
         `<div class="card rounded-5 shadow-lg">
@@ -51,10 +79,10 @@ app.component("recipe-card", {
                         <p>{{likes_number}}</p>
                     </div>
                     <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-2">
-                        <button type="button" class="card-btn-green" title="Like">
+                        <button type="button" class="card-btn-green" v-bind:class="{ 'active': isLiked }" title="Like" v-on:click="onClickLike()">
                             <i class="fas fa-heart"></i>
                         </button>
-                        <button type="button" class="card-btn-green justify-content-center" title="Like">
+                        <button type="button" class="card-btn-green justify-content-center" v-bind:class="{ 'active': isSaved }" title="Save" v-on:click="onClickSave()">
                             <i class="far fa-bookmark"></i>
                         </button>
                         <!-- <button type="button" class="card-btn-green justify-content-end" title="Ver más">

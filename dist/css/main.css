@@ -14741,6 +14741,10 @@ template {
           transform: scale(0.95);
 }
 
+.card-btn-green.active {
+  background-color: #892441;
+}
+
 :root {
   --primary: #ec994b;
   --white: #ffffff;

@@ -20,6 +20,7 @@
 <body class="curve" id="app">
     <!-- Inicio header -->
     <header class="container">
+        <!-- Inicio nav -->
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand me-4" href="index.html">
                 <img src="images/logo.svg" alt="logo" width="100">
@@ -32,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./registro.html">Registro</a>
@@ -50,12 +51,8 @@
                                 filtro
                             </a>
                             <ul class="dropdown-menu fs-4">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
+                                <li v-for="category in categories" :key="category" class="dropdown-item">{{ category }}
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </div>
                         <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
@@ -70,96 +67,11 @@
                 </div>
             </div>
         </nav>
+        <!-- Fin nav -->
     </header>
     <!-- Fin header -->
 
-    <!-- Sección con la foto e info del usuario -->
-    <section class="mt-xl-5 text-center">
-        <div class="d-flex flex-column align-items-center">
-            <h1>Brandon Josue Brenes</h1>
-            <h3 class="fs-sm text-white">@bran</h3>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="foto-usuario">
-                <div class="foto-container">
-                    <img src="images/IMG_20210408_013058.jpg" alt="Foto usuario" id="foto_grande">
-                </div>
-                <button type="button" class="card-btn-green button-border ver-mas" title="Ver más"
-                    data-bs-toggle="modal" data-bs-target="#modalInfoUsuario">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalInfoUsuario" tabindex="-1" aria-labelledby="modalInfoUsuarioLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title ms-4 fs-xsm" id="modalInfoUsuarioLabel">Información de usuario</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                            title="Salir sin guardar"></button>
-                    </div>
-                    <div class="modal-body row">
-                        <div class="text-start m-auto ms-4 col-md-8">
-                            <h3 class="text-green fs-med mb-4">Brandon Josue Brenes</h3>
-                            <p class="fs-sm" id="nombre_usuario">@bran</p>
-                            <p class="fs-sm" id="correo">brandon@gmail.com</p>
-                            <p class="fs-sm">Recetas guardadas: <span id="numero de recetas">{{recetasColeccionadas.length}}</span></p>
-                        </div>
-                        <div class="foto-usuario-sm d-flex m-auto mt-4 col-sm-1">
-                            <div class="foto-container">
-                                <img src="images/IMG_20210408_013058.jpg" alt="foto usuario" id="foto_usuario">
-                            </div>
-                            <button type="button" class="card-btn-green btn-cambiar-foto">
-                                <label for="archivo">
-                                    <input type="file" id="archivo" class="sr-only" accept="image/*">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <!-- <i class="mb-1 ms-1 fa-regular fa-pen-to-square"></i> -->
-                                </label>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button-green-sm m-auto">Guardar cambios</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Fin Modal -->
-    </section>
-    <!-- Sección con la foto e info del usuario -->
-
-    <!--Recetas guardadas-->
-    <main class="container">
-        <h2 class="text-center text-black">Recetas coleccionadas</h2>
-        <div class="dropdown d-flex justify-content-end">
-            <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="ri-equalizer-line"></i>
-            </button>
-            <ul class="dropdown-menu fs-4">
-                <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{ category }}</button></li>
-            </ul>
-        </div>
-        <div class="row">
-            <!-- Tarjetas recetas -->
-            <div v-for="(id) in recetasColeccionadas" class="col-md-3 p-4">
-                <recipe-card :id="id" recipedetails="openRecipePage"></recipe-card>
-            </div>
-        </div>
-        <!-- Botones prev y next -->
-        <div class="row justify-content-end mb-5">
-            <button class="card-btn-green me-3" type="button" title="Prev">
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="card-btn-green me-4" type="button" title="Next">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-        <!-- Botones prev y next -->
-    </main>
-    <!--Fin recetas guardadas-->
+    <user-profile :categories="categories"></user-profile>
 
     <!-- inicio fin footer -->
     <footer>
@@ -212,7 +124,7 @@
     <!-- main js y componentes -->
     <script src="./js/main.js"></script>
     <script src="./js/components/RecipeCard.js"></script>
-    <script src="js/components/RecipePage.js"></script>
+    <script src="./js/components/PerfilUsuario.js"></script>
     <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
 
@@ -222,7 +134,7 @@
     </script>
     <!-- mounted app-->
 
-    <script src="js/cambiar_foto.js"></script>
+    <!-- <script src="js/cambiar_foto.js"></script> -->
 </body>
 
 </html>

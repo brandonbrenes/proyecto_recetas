@@ -9,16 +9,16 @@
     border: none;
 }
 
-.button-green-sm{
+.button-green-sm {
     @include mixins.button(variables.$clr-green, variables.$clr-white, false, true);
     font-size: variables.$fs-xxxsm;
 }
 
-.button-green-rouded{
+.button-green-rouded {
     @include mixins.button(variables.$clr-green, variables.$clr-white, true, false);
 }
 
-.button-white-rouded{
+.button-white-rouded {
     display: inline-block;
     text-align: center;
     padding: 0.69rem;
@@ -30,15 +30,19 @@
     border: none;
     box-sizing: border-box;
     padding: 0 1.5rem;
-    
+
     min-height: 4rem;
     transition: border-color 0.3s ease-out;
-  }
-  
-  .button-border:hover {
-    border: 0.25rem solid white;
-  }
+}
 
-.card-btn-green{
+.button-border:hover {
+    border: 0.25rem solid white;
+}
+
+.card-btn-green {
     @include mixins.button(variables.$clr-green, variables.$clr-white, true, true);
+}
+
+.card-btn-green.active {
+    background-color: variables.$clr-wine;
 }

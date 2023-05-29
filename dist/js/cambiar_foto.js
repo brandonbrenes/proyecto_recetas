@@ -1,4 +1,4 @@
-function mostrarImagen(event) {
+/*function mostrarImagen(event) {
     let imagenSource = event.target.result;
     let previewImage = document.getElementById('foto_usuario');
     let imagenGrande =document.getElementById('foto_grande');
@@ -16,4 +16,4 @@ function procesarArchivo(event) {
     lector.readAsDataURL(imagen);
 }
 
-document.getElementById('archivo').addEventListener('change', procesarArchivo, false);
+document.getElementById('archivo').addEventListener('change', procesarArchivo, false);*/
