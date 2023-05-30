@@ -22,55 +22,9 @@
 
 <body class="curve" id="app">
 
-
     <header class="container">
         <!-- Inicio nav -->
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand me-4" href="index.html">
-                <img src="images/logo.svg" alt="logo" width="100">
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./registro.html">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Login</a>
-                    </li>
-                    <li class="cuadro-seleccion"></li>
-                </ul>
-                <div class="d-flex m-2">
-                    <form class="d-flex" role="search">
-                        <div class=" dropdown m-auto">
-                            <a class="nav-link dropdown-toggle me-3" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                filtro
-                            </a>
-                            <ul class="dropdown-menu fs-4">
-                                <li v-for="category in categories" :key="category" class="dropdown-item">{{ category }}
-                                </li>
-                            </ul>
-                        </div>
-                        <input class="form-control me-2 search-bar fs-4" type="search" placeholder="Buscar"
-                            aria-label="Search">
-                        <button class="button-green-rouded" type="submit" title="search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
-                    <a class="button-white-rouded p-md-2 pt-2" type="button" href="perfil-usuario.html" title="perfil">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </div>
-            </div>
-        </nav>
+        <nav-var :categories="categories"></nav-var>
         <!-- Fin nav -->
 
         <!-- Sección con eslogan e imagen -->
@@ -95,213 +49,47 @@
 
     <!-- inicio main -->
     <main>
-        <!-- Carrusel Más votadas-->
 
-        <section id="tranding">
-            <h2 class="text-center text-light">Recetas más votadas</h2>
-
-            <div class="mt-lg-5 container-fluid bg-wine pb-4">
-                <div class="swiper tranding-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-1.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>Comida rápida</span>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-2.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-3.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$40</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-4.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-5.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-6.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-7.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$8</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tranding-slider-control">
-                        <div class="swiper-button-prev slider-arrow">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-button-next slider-arrow">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!--Carrusel Más votadas-->
+        <swiper-slider :recetasMasVotadas="recetasMasVotadas"></swiper-slider>
+        <!--Más votadas-->
+        
         <!-- Sección todas las recetas -->
         <section class="container">
             <h2 class="text-center text-black mt-5">Recetario</h2>
-            <div class="dropdown d-flex justify-content-end">
-                <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="ri-equalizer-line"></i>
-                </button>
-                <ul class="dropdown-menu fs-4">
-                    <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{
-                            category }}</button></li>
-                    <!-- <li><button class="dropdown-item" type="button">Desayunos</button></li>
-                    <li><button class="dropdown-item" type="button">Almuerzos</button></li>
-                    <li><button class="dropdown-item" type="button">Bebidas</button></li> -->
-                </ul>
-            </div>
-            <div class="row">
-                <!-- Tarjetas recetas -->
-                <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
-                    <recipe-card :id="recipeId"></recipe-card>
+
+            <div class="cards-container">
+                <!-- Filtro por categorías -->
+                <div class="dropdown d-flex justify-content-end">
+                    <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="ri-equalizer-line"></i>
+                    </button>
+                    <ul class="dropdown-menu fs-4">
+                        <li v-for="category in categories" :key="category"><button class="dropdown-item"
+                                type="button">{{
+                                category }}</button></li>
+                    </ul>
                 </div>
+                <!-- Fin filtro por categorías -->
+
+                <div class="row">
+                    <!-- Tarjetas recetas -->
+                    <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
+                        <recipe-card :id="recipeId"></recipe-card>
+                    </div>
+                </div>
+                <!-- Botones prev y next -->
+                <div class="row justify-content-end mb-5">
+                    <button class="card-btn-green me-3" type="button" title="Prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="card-btn-green me-4" type="button" title="Next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Botones prev y next -->
             </div>
-            <!-- Botones prev y next -->
-            <div class="row justify-content-end mb-5">
-                <button class="card-btn-green me-3" type="button" title="Prev">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button class="card-btn-green me-4" type="button" title="Next">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <!-- Botones prev y next -->
         </section>
     </main>
     <!-- inicio main -->
@@ -362,8 +150,9 @@
 
     <!-- main js y componentes -->
     <script src="js/main.js"></script>
-    <script src="./js/components/RecipeCard.js"></script>
-    <script src="./js/components/RecipePage.js"></script>
+    <script src="js/components/NavVar.js"></script>
+    <script src="js/components/RecipeCard.js"></script>
+    <script src="js/components/SwiperSlider.js"></script>
     <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
 

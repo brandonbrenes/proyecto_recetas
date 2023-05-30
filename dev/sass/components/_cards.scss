@@ -1,5 +1,11 @@
 @use '../abstracts/media-queries';
 
+.cards-container{
+    @include media-queries.respond-to(media-queries.$tablet-portrait) {
+        margin: 3rem ;
+    }
+}
+
 %header-text {
     display: -webkit-box;
     -webkit-box-orient: vertical;

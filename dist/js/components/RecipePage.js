@@ -87,36 +87,37 @@ app.component("recipe-page", {
       </div>
 
       <!-- inicio fin footer -->
-      <footer>
-        <div class="container d-flex justify-content-center">
-          <ul class="row">
-            <li class="col">
-              <a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button" title="Facebook" class="button-white-rouded p-md-2 pt-2">
-                <i class="fab fa-facebook-f min-w-20 text-center"></i>
-              </a>
+    <footer>
+    <div class="container d-flex justify-content-center">
+        <ul class="row">
+            <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                    title="Facebook" class="button-white-rouded p-md-2 pt-2">
+                    <i class="fab fa-facebook-f min-w-20 text-center"></i>
+                </a>
             </li>
-            <li class="col">
-              <a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button" title="Youtube" class="button-white-rouded p-md-2 pt-2">
-                <i class="fab fa-youtube min-w-20 text-center"></i>
-              </a>
+            <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                    title="Youtube" class="button-white-rouded p-md-2 pt-2">
+                    <i class="fab fa-youtube min-w-20 text-center"></i>
+                </a>
             </li>
-            <li class="col">
-              <a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button" title="Instagram" class="button-white-rouded p-md-2 pt-2">
-                <i class="fab fa-instagram min-w-20 text-center"> </i>
-              </a>
+            <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                    title="Instagram" class="button-white-rouded p-md-2 pt-2">
+                    <i class="fab fa-instagram min-w-20 text-center"> </i>
+                </a>
             </li>
-            <li class="col">
-              <a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button" title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
-                <i class="fab fa-twitter min-w-20 text-center"> </i>
-              </a>
+            <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                    title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
+                    <i class="fab fa-twitter min-w-20 text-center"> </i>
+                </a>
             </li>
-          </ul>
-        </div>
-        <div class="text-center text-white">
-          ©2023 Copyright:
-          <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
-        </div>
-      </footer>
+        </ul>
+    </div>
+    <div class="text-center text-white">
+        ©2023 Copyright:
+        <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
+    </div>
+</footer>
+<!-- fin footer -->
     </div>
   `
 });

@@ -117,28 +117,11 @@ body {
   bottom: 0;
 }
 
-.tranding-slide-content .food-price {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: var(--white);
-}
-
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
   color: var(--white);
-}
-
-.food-rating {
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.rating ion-icon {
-  color: var(--primary);
 }
 
 .swiper-slide-shadow-left,
@@ -208,7 +191,7 @@ body {
 
 .tranding-slider-control .swiper-pagination {
   position: relative;
-  width: 15rem;
+  width: 20rem;
   bottom: 1rem;
 }
 

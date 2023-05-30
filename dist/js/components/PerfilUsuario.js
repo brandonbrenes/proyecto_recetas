@@ -75,7 +75,7 @@ app.component("user-profile", {
                             <div class="foto-container">
                                 <img v-bind:src="userPicturePreview" alt="foto usuario" id="foto_usuario">
                             </div>
-                            <button type="button" class="card-btn-green btn-cambiar-foto">
+                            <button type="button" class="card-btn-green btn-cambiar-foto" title="Cambiar foto">
                                 <label for="archivo">
                                     <input type="file" id="archivo" @change="procesarArchivo" class="sr-only" accept="image/*">
                                     <i class="fa-solid fa-pen"></i>
@@ -97,32 +97,39 @@ app.component("user-profile", {
     <!--Recetas guardadas-->
     <main class="container">
         <h2 class="text-center text-black">Recetas coleccionadas</h2>
-        <div class="dropdown d-flex justify-content-end">
-            <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="ri-equalizer-line"></i>
-            </button>
-            <ul class="dropdown-menu fs-4">
-                <li v-for="category in categories" :key="category"><button class="dropdown-item" type="button">{{ category }}</button></li>
-            </ul>
-        </div>
-        <div class="row">
-            <!-- Tarjetas recetas -->
-            <div v-for="recipeId in recetasColeccionadas" :key="recipeId" class="col-md-3 p-4">
+        <div class="cards-container">
+                <!-- Filtro por categorías -->
+                <div class="dropdown d-flex justify-content-end">
+                    <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="ri-equalizer-line"></i>
+                    </button>
+                    <ul class="dropdown-menu fs-4">
+                        <li v-for="category in categories" :key="category"><button class="dropdown-item"
+                                type="button">{{
+                                category }}</button></li>
+                    </ul>
+                </div>
+                <!-- Fin filtro por categorías -->
+
+                <div class="row">
+                    <!-- Tarjetas recetas -->
+                    <div v-for="recipeId in recetasColeccionadas" :key="recipeId" class="col-md-3 p-4">
                 <recipe-card :id="recipeId" :saved="true"></recipe-card>
             </div>
-        </div>
-        <!-- Botones prev y next -->
-        <div class="row justify-content-end mb-5">
-            <button class="card-btn-green me-3" type="button" title="Prev">
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="card-btn-green me-4" type="button" title="Next">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-        <!-- Botones prev y next -->
+                </div>
+                <!-- Botones prev y next -->
+                <div class="row justify-content-end mb-5">
+                    <button class="card-btn-green me-3" type="button" title="Prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="card-btn-green me-4" type="button" title="Next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Botones prev y next -->
+            </div>
     </main>
     <!--Fin recetas guardadas-->
-        `
+    `
 });
