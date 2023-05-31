@@ -14692,8 +14692,11 @@ template {
   -webkit-transition: border-color 0.3s ease-out;
   transition: border-color 0.3s ease-out;
 }
-
 .button-border:hover {
+  border: 0.25rem solid white;
+}
+
+.button-border.active {
   border: 0.25rem solid white;
 }
 

@@ -5,7 +5,7 @@ const app = Vue.createApp({
             selectedCategory: "All",
             recipesIds: [],//solo guarda el id de las recetas
             selectedId: "53058",
-            recetasMasVotadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"]
+            idRecetasMasVotadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"]
         }
     },
     mounted: function () {

@@ -9,25 +9,26 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/recipe.css">
-
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
 </head>
 
-<body class="curve" id="app">
+<body class="curve">
 
-    <!-- Inicio header -->
-    <header class="container">
-        <!-- Inicio nav -->
-        <nav-var></nav-var>
-        <!-- Fin nav -->
-    </header>
-    <!-- Fin header -->
-    
-    <recipe-page ></recipe-page>
+
+    <div id="app">
+        <!-- Inicio header -->
+        <header class="container">
+            <!-- Inicio nav -->
+            <nav-var :categories="categories"></nav-var>
+            <!-- Fin nav -->
+        </header>
+        <!-- Fin header -->
+
+        <recipe-page></recipe-page>
+    </div>
+
+    <!-- Librerías de iconos -->
+    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- BS JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -35,18 +36,20 @@
         crossorigin="anonymous"></script>
     <!-- BS JS -->
 
-    <!-- main js -->
+    <!-- Librerías de Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
-
-    <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- Axios -->
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    <!-- FIn librerías de Vue -->
 
-    <script src="./js/main.js"></script>
-    <script src="./js/components/NavVar.js"></script>
-    
-    <!-- mounted app-->
-    <script src="./js/components/RecipePage.js"></script>
+    <!-- main js y componentes -->
+    <script src="js/main.js"></script>
+    <script src="js/components/NavVar.js"></script>
+    <script src="js/components/RecipePage.js"></script>
+    <script src="js/components/SwiperSlider.js"></script>
+    <!-- <script src="js/router.js"></script> -->
+    <!-- main js -->
 
     <!-- mounted app-->
     <script>

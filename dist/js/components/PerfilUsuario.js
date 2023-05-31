@@ -10,9 +10,6 @@ app.component("user-profile", {
             recetasColeccionadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"],
         }
     },
-    mounted() {
-        // document.getElementById('archivo').addEventListener('change', this.procesarArchivo, false);
-    },
     methods: {
         mostrarImagen: function(event) {
             let imagenSource = event.target.result;

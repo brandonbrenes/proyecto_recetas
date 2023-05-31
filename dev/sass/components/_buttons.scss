@@ -33,9 +33,15 @@
 
     min-height: 4rem;
     transition: border-color 0.3s ease-out;
+
+    &:hover {
+        border: 0.25rem solid white;
+    }
 }
 
-.button-border:hover {
+
+
+.button-border.active{
     border: 0.25rem solid white;
 }
 

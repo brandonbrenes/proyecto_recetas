@@ -1,44 +1,62 @@
 app.component("recipe-page", {
-    data() {
-        return {
-            recipeId: "",
-            likes_number: 0,
-            image: "",
-            category: "",
-            name: "",
-            instructions: "",
-            ingredients: ""
-        }
-    },
-    mounted() {
-        const urlParams = new URLSearchParams(window.location.search);
-        this.recipeId = urlParams.get('id');
-        this.fetchRecipe();
-    },
-    methods: {
-        fetchRecipe() {
-            // Realiza la petición HTTP para obtener los detalles de la receta
-            axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + this.recipeId)
-                .then(response => {
-                    // Actualiza los datos de la receta en el componente
-                    let recipe = response.data.meals[0];
-                    this.$data.image = recipe.strMealThumb;
-                    this.$data.category = recipe.strCategory;
-                    this.$data.name = recipe.strMeal;
-                    this.$data.instructions = recipe.strInstructions;
+  data() {
+    return {
+      isLiked: false,
+      isSaved: false,
+      recipeId: "",
+      likes_number: 10,
+      image: "",
+      category: "",
+      name: "",
+      instructions: "",
+      ingredients: ""
+    }
+  },
+  mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    this.recipeId = urlParams.get('id');
+    this.fetchRecipe();
+  },
+  methods: {
+    fetchRecipe() {
+      // Realiza la petición HTTP para obtener los detalles de la receta
+      axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + this.recipeId)
+        .then(response => {
+          // Actualiza los datos de la receta en el componente
+          let recipe = response.data.meals[0];
+          this.$data.image = recipe.strMealThumb;
+          this.$data.category = recipe.strCategory;
+          this.$data.name = recipe.strMeal;
+          this.$data.instructions = recipe.strInstructions;
 
-                    let ingredientsList = "";
-                    for (let i = 1; i <= 20; i++) {
-                        if (recipe["strIngredient" + i] != "" && recipe["strIngredient" + i] != null) {
-                            ingredientsList += recipe["strMeasure" + i] + " - " + recipe["strIngredient" + i] + "\n";
-                        }
-                    }
-                    this.$data.ingredients = ingredientsList;
-                })
-                .catch(error => console.log(error));
-        }
+          let ingredientsList = "";
+          for (let i = 1; i <= 20; i++) {
+            if (recipe["strIngredient" + i] != "" && recipe["strIngredient" + i] != null) {
+              ingredientsList += recipe["strMeasure" + i] + " - " + recipe["strIngredient" + i] + "\n";
+            }
+          }
+          this.$data.ingredients = ingredientsList;
+        })
+        .catch(error => console.log(error));
     },
-    template:
+    onClickLike() {
+      if (this.isLiked) {
+        this.likes_number--;
+        this.isLiked = false;
+      } else {
+        this.likes_number++;
+        this.isLiked = true;
+      }
+    },
+    onClickSave() {
+      if (this.isSaved) {
+        this.isSaved = false;
+      } else {
+        this.isSaved = true;
+      }
+    }
+  },
+  template:
     /*html */
     `<section class="container">
       <div class="d-flex justify-content-center row">
@@ -49,22 +67,13 @@ app.component("recipe-page", {
           </div>
           <div class="botones-receta">
             <div class="d-grid">
-              <button type="button" class="card-btn-green button-border mb-4" title="Guardar">
-                <i class="far fa-bookmark"></i>
+              <button type="button" class="card-btn-green button-border mb-4" v-bind:class="{ 'active': isSaved }" v-on:click="onClickSave()" title="Guardar receta">
+                <i class="fas fa-bookmark"></i>
               </button>
-              <button type="button" class="card-btn-green button-border" title="Like">
+              <button type="button" class="card-btn-green button-border mb-2" v-bind:class="{ 'active': isLiked }" v-on:click="onClickLike()" title="Like">
                 <i class="fas fa-heart"></i>
               </button>
-            </div>
-          </div>
-          <div class="botones-receta">
-            <div class="d-grid">
-              <button type="button" class="card-btn-green button-border mb-4" title="Like">
-                <i class="far fa-bookmark"></i>
-              </button>
-              <button type="button" class="card-btn-green button-border" title="Like">
-                <i class="fas fa-heart"></i>
-              </button>
+              <p class="text-center text-light">{{likes_number}}</p>
             </div>
           </div>
         </div>

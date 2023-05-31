@@ -55,7 +55,7 @@ h1 {
 
 .botones-receta {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 1rem;
   right: 2rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;

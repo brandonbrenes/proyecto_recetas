@@ -10,129 +10,124 @@
     <!-- Style sheet -->
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
-    <!-- remixincon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
 </head>
 
-<body class="curve" id="app">
+<body class="curve">
 
-    <header class="container">
-        <!-- Inicio nav -->
-        <nav-var :categories="categories"></nav-var>
-        <!-- Fin nav -->
+    <div id="app">
+        <header class="container">
+            <!-- Inicio nav -->
+            <nav-var :categories="categories"></nav-var>
+            <!-- Fin nav -->
 
-        <!-- Sección con eslogan e imagen -->
-        <section>
-            <div class="row mt-5">
-                <div class="m-auto col-md-6">
-                    <div>
-                        <div class="justify-content-center">
-                            <h1 class="text-center">Recetas que se <span>adaptan</span> a ti</h1>
-                            <div class="d-flex justify-content-center">
-                                <a href="./login.html" class="button-green">Login</a>
+            <!-- Sección con eslogan e imagen -->
+            <section>
+                <div class="row mt-5">
+                    <div class="m-auto col-md-6">
+                        <div>
+                            <div class="justify-content-center">
+                                <h1 class="text-center">Recetas que se <span>adaptan</span> a ti</h1>
+                                <div class="d-flex justify-content-center">
+                                    <a href="./login.html" class="button-green">Login</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid m-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
-                </div>
-            </div>
-        </section>
-    </header>
-
-    <!-- inicio main -->
-    <main>
-
-        <!--Carrusel Más votadas-->
-        <swiper-slider :recetasMasVotadas="recetasMasVotadas"></swiper-slider>
-        <!--Más votadas-->
-        
-        <!-- Sección todas las recetas -->
-        <section class="container">
-            <h2 class="text-center text-black mt-5">Recetario</h2>
-
-            <div class="cards-container">
-                <!-- Filtro por categorías -->
-                <div class="dropdown d-flex justify-content-end">
-                    <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="ri-equalizer-line"></i>
-                    </button>
-                    <ul class="dropdown-menu fs-4">
-                        <li v-for="category in categories" :key="category"><button class="dropdown-item"
-                                type="button">{{
-                                category }}</button></li>
-                    </ul>
-                </div>
-                <!-- Fin filtro por categorías -->
-
-                <div class="row">
-                    <!-- Tarjetas recetas -->
-                    <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
-                        <recipe-card :id="recipeId"></recipe-card>
+                    <div class="col-md-6">
+                        <img class="img-fluid m-auto d-block" src="images/Spaghetti.png" alt="Spaguetti">
                     </div>
                 </div>
-                <!-- Botones prev y next -->
-                <div class="row justify-content-end mb-5">
-                    <button class="card-btn-green me-3" type="button" title="Prev">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <button class="card-btn-green me-4" type="button" title="Next">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+            </section>
+        </header>
+
+        <!-- inicio main -->
+        <main>
+            <!--Carrusel Más votadas-->
+            <swiper-slider :idRecetasVotadas="idRecetasMasVotadas"></swiper-slider>
+            <!--Más votadas-->
+
+            <!-- Sección todas las recetas -->
+            <section class="container">
+                <h2 class="text-center text-black mt-5">Recetario</h2>
+
+                <div class="cards-container">
+                    <!-- Filtro por categorías -->
+                    <div class="dropdown d-flex justify-content-end">
+                        <button class="card-btn-green me-3" type="button" title="Filtrar" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ri-equalizer-line"></i>
+                        </button>
+                        <ul class="dropdown-menu fs-4">
+                            <li v-for="category in categories" :key="category"><button class="dropdown-item"
+                                    type="button">{{
+                                    category }}</button></li>
+                        </ul>
+                    </div>
+                    <!-- Fin filtro por categorías -->
+
+                    <div class="row">
+                        <!-- Tarjetas recetas -->
+                        <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
+                            <recipe-card :id="recipeId"></recipe-card>
+                        </div>
+                    </div>
+                    <!-- Botones prev y next -->
+                    <div class="row justify-content-end mb-5">
+                        <button class="card-btn-green me-3" type="button" title="Prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="card-btn-green me-4" type="button" title="Next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <!-- Botones prev y next -->
                 </div>
-                <!-- Botones prev y next -->
+            </section>
+        </main>
+        <!-- inicio main -->
+
+        <!-- inicio fin footer -->
+        <footer>
+            <div class="container d-flex justify-content-center">
+                <ul class="row">
+                    <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                            title="Facebook" class="button-white-rouded p-md-2 pt-2">
+                            <i class="fab fa-facebook-f min-w-20 text-center"></i>
+                        </a>
+                    </li>
+                    <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                            title="Youtube" class="button-white-rouded p-md-2 pt-2">
+                            <i class="fab fa-youtube min-w-20 text-center"></i>
+                        </a>
+                    </li>
+                    <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                            title="Instagram" class="button-white-rouded p-md-2 pt-2">
+                            <i class="fab fa-instagram min-w-20 text-center"> </i>
+                        </a>
+                    </li>
+                    <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
+                            title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
+                            <i class="fab fa-twitter min-w-20 text-center"> </i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </main>
-    <!-- inicio main -->
-
-    <!-- inicio fin footer -->
-    <footer>
-        <div class="container d-flex justify-content-center">
-            <ul class="row">
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Facebook" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-facebook-f min-w-20 text-center"></i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Youtube" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-youtube min-w-20 text-center"></i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Instagram" class="button-white-rouded p-md-2 pt-2">
-                        <i class="fab fa-instagram min-w-20 text-center"> </i>
-                    </a>
-                </li>
-                <li class="col"><a href="https://github.com/brandonbrenes/proyecto_recetas.git" type="button"
-                        title="Twitter" class="button-white-rouded p-md-2 pt-2 me-4">
-                        <i class="fab fa-twitter min-w-20 text-center"> </i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="text-center text-white">
-            ©2023 Copyright:
-            <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
-        </div>
-    </footer>
-    <!-- fin footer -->
-
+            <div class="text-center text-white">
+                ©2023 Copyright:
+                <a class="text-white" href="https://github.com/brandonbrenes/proyecto_recetas.git">Brandon Brenes</a>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
     <!-- Slider JS -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/slider.js"></script>
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
     <!-- Slider JS -->
+
+    <!-- Librerías de iconos -->
+    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- BS JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -140,13 +135,12 @@
         crossorigin="anonymous"></script>
     <!-- BS JS -->
 
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-
+    <!-- Librerías de Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script> -->
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    <!-- FIn librerías de Vue -->
 
     <!-- main js y componentes -->
     <script src="js/main.js"></script>

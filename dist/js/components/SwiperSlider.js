@@ -1,12 +1,10 @@
 app.component('swiper-slider', {
-
     data() {
         return {
-            recetasMasVotadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"]
+            idRecetasMasVotadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"]
         }
     },
     mounted: function () {
-        console.log(this.recetasMasVotadas);
         new Swiper('.tranding-slider', {
             effect: 'coverflow',
             grabCursor: true,
@@ -28,22 +26,18 @@ app.component('swiper-slider', {
                 prevEl: '.swiper-button-prev',
             }
         });
-    },
+    }
+    ,
     template:
-        /*html*/
+        /*html */
         `<section id="tranding">
             <h2 class="text-center text-light">Recetas más votadas</h2>
             <div class="mt-lg-5 container-fluid bg-wine pb-4">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
-                    
-                    <recipe-card v-for="recipeId in recetasMasVotadas" class="swiper-slide tranding-slide" v-bind:id="recipeId"></recipe-card>
-                    <!--  <div v-for="recipeId in recetasMasVotadas" :key="recipeId">
-                        
-                    </div>
-                        <recipe-card v-for="num in 10" class="swiper-slide tranding-slide"></recipe-card>
-                        
-                        <div v-for="num in 10" class="swiper-slide tranding-slide">
+
+                        <!-- Tarjeta slider-->
+                        <!--<div v-for="num in 10" class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
                                 <img src="images/tranding-food-1.png" alt="Tranding">
                             </div>
@@ -57,15 +51,19 @@ app.component('swiper-slider', {
                                     </h3>
                                 </div>
                             </div>
-                        </div>
-                        -->
+                        </div>-->
+                        <recipe-card v-for="recipeId in idRecetasMasVotadas" :key="recipeId" v-bind:id="recipeId" cardType="slider card"></recipe-card>
+                         <!-- Fin tarjeta slider-->
+
                     </div>
                     <div class="tranding-slider-control">
                         <div class="swiper-button-prev slider-arrow">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
+                           <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+                            <i class="text-black fa-solid fa-arrow-left"></i>
                         </div>
                         <div class="swiper-button-next slider-arrow">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        <i class="text-black fa-solid fa-arrow-right"></i>
+                            <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
