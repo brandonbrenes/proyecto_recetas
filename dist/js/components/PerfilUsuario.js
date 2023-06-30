@@ -51,7 +51,6 @@ app.component("user-profile", {
                 </button>
             </div>
         </div>
-
         <div class="modal fade" id="modalInfoUsuario" tabindex="-1" aria-labelledby="modalInfoUsuarioLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -59,13 +58,14 @@ app.component("user-profile", {
                     <div class="modal-header">
                         <h5 class="modal-title ms-4 fs-xsm" id="modalInfoUsuarioLabel">Información de usuario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                            title="Salir sin guardar" v-on:click="discardChanges()"></button>
+                            title="Salir sin guardar" v-on:click="discardChanges()">
+                        </button>
                     </div>
                     <div class="modal-body row">
                         <div class="text-start m-auto ms-4 col-md-8">
-                            <h3 class="text-green fs-med mb-4">Brandon Josue Brenes</h3>
-                            <p class="fs-sm" id="nombre_usuario">@bran</p>
-                            <p class="fs-sm" id="correo">brandon@gmail.com</p>
+                            <h3 class="text-green fs-med mb-4" contenteditable>{{name}}</h3>
+                            <p class="fs-sm">Usuario:<input type="text" v-bind:value="userName" class="fs-sm" id="nombre_usuario"></input></p>
+                            <p class="fs-sm"> Correo: <input type="text" v-bind:value="email" class="fs-sm" id="email"></input></p>
                             <p class="fs-sm">Recetas guardadas: <span id="numero de recetas">{{recetasColeccionadas.length}}</span></p>
                         </div>
                         <div class="foto-usuario-sm d-flex m-auto mt-4 col-sm-1">
