@@ -85,7 +85,7 @@ body {
 }
 
 .tranding-slide {
-  width: 37rem;
+  width: 35rem;
   height: 42rem;
   position: relative;
 }
@@ -103,7 +103,7 @@ body {
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 37rem;
+  width: 35rem;
   height: 42rem;
   border-radius: 2rem;
   object-fit: cover;
@@ -201,4 +201,20 @@ body {
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: variables.$clr-green;
+}
+
+.slider-buttons{
+  position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)55%, rgb(0, 0, 0));
 }

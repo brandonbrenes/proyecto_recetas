@@ -64,7 +64,9 @@ app.component("recipe-card", {
         /*html*/
         `<div v-if="cardType == 'standard card'" class="card rounded-5 shadow-lg">
             <div class="card-img-container">
-              <a :href="'receta.html?id=' + id"><img v-bind:src="image" class="rounded-top-5" alt="Imagen de la receta"></a>
+              <a :href="'receta.html?id=' + id">
+                <img v-bind:src="image" class="rounded-top-5" alt="Imagen de la receta">
+              </a>
             </div>
             <div class="card-body">
               <h4 class="card-subtitle mb-2 text-muted">{{category}}</h4>
@@ -88,20 +90,36 @@ app.component("recipe-card", {
             </div>
         </div>
         
-        <a v-else-if="cardType === 'slider card'" :href="'receta.html?id=' + id" class="swiper-slide tranding-slide">
-            <div class="tranding-slide-img">
-                <img v-bind:src="image">
-            </div>
+        <div v-else-if="cardType === 'slider card'" class="swiper-slide tranding-slide">
             <div class="tranding-slide-content">
+                <a :href="'receta.html?id=' + id">
+                    <div class="tranding-slide-img">
+                        <img v-bind:src="image" alt="Imagen de la receta">
+                        <div class="gradient"></div>
+                    </div>
+                </a>
+
+                <div class="slider-buttons">
+                    <div class="d-grid">
+                        <button type="button" class="card-btn-green button-border mb-4" v-bind:class="{ 'active': isSaved }" v-on:click="onClickSave()" title="Guardar receta">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                        <button type="button" class="card-btn-green button-border mb-2" v-bind:class="{ 'active': isLiked }" v-on:click="onClickLike()" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <p class="text-center text-light">{{likes_number}}</p>
+                    </div>
+                </div>
+
                 <div class="tranding-slide-content-bottom">
                     <h2 class="food-name">
                         {{name}}
                     </h2>
                     <h3 class="food-rating">
-                        <span>{{category}}</span>
+                        {{category}}
                     </h3>
                 </div>
             </div>
-        </a>`
-        ,
+        </div>`
+    ,
 });

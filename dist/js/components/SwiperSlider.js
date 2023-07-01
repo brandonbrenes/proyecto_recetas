@@ -14,7 +14,7 @@ app.component('swiper-slider', {
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 100,
+                depth: 90,
                 modifier: 2.5,
             },
             pagination: {
@@ -35,23 +35,7 @@ app.component('swiper-slider', {
             <div class="mt-lg-5 container-fluid bg-wine pb-4">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">
-
-                        <!-- Tarjeta slider-->
-                        <!--<div v-for="num in 10" class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="images/tranding-food-1.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>Comida rápida</span>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>-->
+                    
                         <recipe-card v-for="recipeId in idRecetasMasVotadas" :key="recipeId" v-bind:id="recipeId" cardType="slider card"></recipe-card>
                          <!-- Fin tarjeta slider-->
 
