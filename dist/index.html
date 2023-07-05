@@ -8,8 +8,10 @@
     <title>Gusticos</title>
 
     <!-- Style sheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/pages/home.css">
     <link rel="stylesheet" href="css/main.css">
+    
 </head>
 
 <body class="curve">
@@ -43,7 +45,8 @@
         <!-- inicio main -->
         <main>
             <!--Carrusel Más votadas-->
-            <swiper-slider :idRecetasVotadas="idRecetasMasVotadas"></swiper-slider>
+            <!-- <div>{{top10}}</div> -->
+            <swiper></swiper>
             <!--Más votadas-->
 
             <!-- Sección todas las recetas -->
@@ -67,8 +70,10 @@
 
                     <div class="row">
                         <!-- Tarjetas recetas -->
-                        <div v-for="recipeId in recipesIds" :key="recipeId" class="col-md-3 p-4">
-                            <recipe-card :id="recipeId"></recipe-card>
+                        <div v-for="recipe in recipes" class="col-md-3 p-4">
+                            <recipe-card :id="recipe.id" :name="recipe.name" :image="recipe.image"
+                                :description="recipe.description" :category="recipe.category"
+                                :likes="recipe.likes"></recipe-card>
                         </div>
                     </div>
                     <!-- Botones prev y next -->
@@ -119,11 +124,7 @@
         </footer>
         <!-- fin footer -->
     </div>
-    <!-- Slider JS -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
-    <!-- Slider JS -->
+
 
     <!-- Librerías de iconos -->
     <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
@@ -141,6 +142,15 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
     <!-- FIn librerías de Vue -->
+
+    <!-- Slider JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script><!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+    <!-- Slider JS -->
 
     <!-- main js y componentes -->
     <script src="js/main.js"></script>

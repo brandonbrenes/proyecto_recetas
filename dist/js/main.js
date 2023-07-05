@@ -3,12 +3,12 @@ const app = Vue.createApp({
         return {
             categories: ["All"],
             selectedCategory: "All",
-            recipesIds: [],//solo guarda el id de las recetas
-            selectedId: "53058",
-            idRecetasMasVotadas: ["52851", "53011", "52955", "52948", "52952", "52981", "52924", "52804", "53019", "52939"]
+            recipes: [],//solo guarda el id de las recetas
+            top10: []
         }
     },
-    mounted: function () {
+    beforeMount() {
+        this.fetchTop10();
         this.fetchCategories();
         this.fetchRecipes();
     },
@@ -16,16 +16,15 @@ const app = Vue.createApp({
         fetchCategories() {
             axios({
                 method: 'get',
-                url: 'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
+                url: 'http://primer-proyecto.test/api/recipes/categories'
             })
                 .then(
                     (response) => {
-                        let items = response.data.meals;
+                        let items = response.data;
 
                         items.forEach(item => {
-                            this.categories.push(item.strCategory);
+                            this.categories.push(item.category);
                         });
-                        //this.recipesIds.push(id);
                     }
                 )
                 .catch(
@@ -33,26 +32,59 @@ const app = Vue.createApp({
                 )
         },
         fetchRecipes: function () {
-            recipesIds = [];
-            words = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            recipes = [];
 
-            for (let i = 0; i < 16; i++) {
                 axios({
                     method: 'get',
-                    url: "https://www.themealdb.com/api/json/v1/1/search.php?f="+words[i]
-                    // url: 'https://www.themealdb.com/api/json/v1/1/random.php'
+                    url: "http://primer-proyecto.test/api/recipes/all"
                 })
-                    .then(
-                        (response) => {
-                            let id = response.data.meals[0].idMeal;
-                            this.recipesIds.push(id);
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    )
-            }
+                .then(
+                    (response) => {
+                        
+                        for (let numero = 0; numero < 16; numero++) {
+                            
+                            let recipe = response.data[numero];
 
+                            this.recipes.push({
+                                id: recipe.id,
+                                name: recipe.name,
+                                image: "http://localhost/primer-proyecto/public/storage/imgs/"+recipe.image,
+                                description: recipe.description, 
+                                category: recipe.category,
+                                likes: recipe.likes
+                            });
+                        }
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                )
+        },
+        fetchTop10: function () {
+            axios({
+                method: 'get',
+                url: "http://primer-proyecto.test/api/recipes/top10"
+            })
+            .then(
+                (response) => {
+                    for (let numero = 0; numero < 10; numero++) {
+                        let recipe = response.data[numero];
+                        this.top10.push({
+                            id: recipe.id,
+                            name: recipe.name,
+                            image: "http://localhost/primer-proyecto/public/storage/imgs/"+recipe.image,
+                            description: recipe.description, 
+                            category: recipe.category,
+                            likes: recipe.likes
+                        });
+                    }
+                    
+                    
+                }
+            )
+            .catch(
+                error => console.log(error)
+            )
         }
     }
 })

@@ -1,11 +1,32 @@
 app.component("recipe-card", {
     props: {
-        id: {
-            type: String
-        },
         cardType: {
             type: String,
             default: "standard card"
+        },
+        id: {
+            type: Number,
+            default: 0
+        },
+        name:{
+            type: String,
+            default: ""
+        },
+        image:{
+            type: String,
+            default: ""
+        },
+        description:{
+            type: String,
+            default: "Esta descripción es muy larga para hacer la prueba"
+        },
+        category:{
+            type: String,
+            default: ""
+        },
+        likes: {
+            type:Number,
+            default: 0
         },
         liked: {
             type: Boolean,
@@ -15,32 +36,15 @@ app.component("recipe-card", {
             type: Boolean,
             default: false
         }
+        //level
+        //occasion
     },
     data() {
         return {
             isLiked: this.liked,
             isSaved: this.saved,
-            likes_number: 0,
-            image: "",
-            category: "",
-            name: "",
-            description: "Esta descripción es muy larga para hacer la prueba"
+            likes_number: this.likes,
         }
-    },
-    mounted() {
-        axios({
-            method: 'get',
-            url: 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + this.id
-        })
-            .then((response) => {
-                let receta = response.data.meals[0];
-
-                this.image = receta.strMealThumb;
-                this.category = receta.strCategory;
-                this.name = receta.strMeal;
-            })
-            .catch(error => console.log(error));
-
     },
     methods: {
         onClickLike() {
@@ -70,7 +74,7 @@ app.component("recipe-card", {
             </div>
             <div class="card-body">
               <h4 class="card-subtitle mb-2 text-muted">{{category}}</h4>
-              <div class="card-header">
+              <div class="card-header bg-white">
                 <h3 class="card-title">{{name}}</h3>
                 <p class="card-text">{{description}}</p>
               </div>
@@ -78,7 +82,7 @@ app.component("recipe-card", {
                 <div class="likes-number">
                   <p>{{likes_number}}</p>
                 </div>
-                <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-2">
+                <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-2 bg-white">
                   <button type="button" class="card-btn-green" v-bind:class="{ 'active': isLiked }" title="Like" v-on:click="onClickLike()">
                     <i class="fas fa-heart"></i>
                   </button>
@@ -92,32 +96,30 @@ app.component("recipe-card", {
         
         <div v-else-if="cardType === 'slider card'" class="swiper-slide tranding-slide">
             <div class="tranding-slide-content">
-                <a :href="'receta.html?id=' + id">
+                <a :href="'receta.html?id=' + id" class="text-white">
                     <div class="tranding-slide-img">
                         <img v-bind:src="image" alt="Imagen de la receta">
                         <div class="gradient"></div>
                     </div>
+                    <div class="tranding-slide-content-bottom">
+                        <h2 class="food-name">
+                            {{name}}
+                        </h2>
+                        <h3 class="food-rating">
+                            {{category}}
+                        </h3>
+                    </div>
                 </a>
-
                 <div class="slider-buttons">
                     <div class="d-grid">
-                        <button type="button" class="card-btn-green button-border mb-4" v-bind:class="{ 'active': isSaved }" v-on:click="onClickSave()" title="Guardar receta">
+                        <button type="button" class="card-btn-green mb-4" v-bind:class="{ 'active': isSaved }" v-on:click="onClickSave()" title="Guardar receta">
                             <i class="fas fa-bookmark"></i>
                         </button>
-                        <button type="button" class="card-btn-green button-border mb-2" v-bind:class="{ 'active': isLiked }" v-on:click="onClickLike()" title="Like">
+                        <button type="button" class="card-btn-green mb-2" v-bind:class="{ 'active': isLiked }" v-on:click="onClickLike()" title="Like">
                             <i class="fas fa-heart"></i>
                         </button>
                         <p class="text-center text-light">{{likes_number}}</p>
                     </div>
-                </div>
-
-                <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                        {{name}}
-                    </h2>
-                    <h3 class="food-rating">
-                        {{category}}
-                    </h3>
                 </div>
             </div>
         </div>`
