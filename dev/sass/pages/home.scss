@@ -1,6 +1,6 @@
 @use '../abstracts/media-queries';
 
-.curve{
+.curve {
     position: relative;
     height: 60rem;
 
@@ -9,22 +9,30 @@
     background-position: center center;
     background-repeat: no-repeat;
 
-    
 
-    @include media-queries.respond-to(media-queries.$small-desktop){
+
+    @include media-queries.respond-to(media-queries.$small-desktop) {
         background-position-y: 8rem;
     }
 
-    @include media-queries.respond-to(media-queries.$large-desktop){
+    @include media-queries.respond-to(media-queries.$large-desktop) {
         background-position-y: 5rem;
     }
 
-    @include media-queries.respond-to(media-queries.$tablet-portrait){
+    @include media-queries.respond-to(media-queries.$tablet-portrait) {
         background-position-y: 18rem;
         background-position-x: -5rem;
     }
 
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(media-queries.$phone) {
         background-position-x: -40rem;
     }
+}
+
+// .opciones {
+//     display: none;
+// }
+
+.filtro-btn {
+    margin-bottom: 5px;
 }

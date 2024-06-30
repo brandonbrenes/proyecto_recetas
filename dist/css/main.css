@@ -14698,6 +14698,18 @@ template {
   background-color: #892441;
 }
 
+.card-btn-green:disabled {
+  background-color: #23755c;
+  opacity: 0.8;
+}
+.card-btn-green:disabled::before {
+  display: none;
+}
+.card-btn-green:disabled:active {
+  -webkit-transform: none;
+          transform: none;
+}
+
 :root {
   --primary: #ec994b;
   --white: #ffffff;
@@ -14915,6 +14927,9 @@ body {
   top: 2rem;
   right: 2rem;
 }
+.slider-buttons .likes {
+  background-color: #222224;
+}
 
 .gradient {
   position: absolute;
@@ -14981,8 +14996,11 @@ body {
   }
 }
 
-.image-link {
-  height: 100px;
+.likes-number-slider {
+  /* Estilos del párrafo */
+  background-color: rgba(0, 0, 0, 0.4); /* Color de fondo con transparencia */
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 .navbar {

@@ -39,8 +39,6 @@
     }
 }
 
-
-
 .button-border.active{
     border: 0.25rem solid white;
 }
@@ -52,3 +50,19 @@
 .card-btn-green.active {
     background-color: variables.$clr-wine;
 }
+
+.card-btn-green:disabled{
+    background-color: variables.$clr-green;
+    opacity: 0.8;
+    
+    &::before{
+        display: none;
+    }
+
+    &:active {
+        transform: none;
+    }
+}
+  
+  
+

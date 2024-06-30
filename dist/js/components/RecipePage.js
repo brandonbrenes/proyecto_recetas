@@ -18,24 +18,27 @@ app.component("recipe-page", {
     this.fetchRecipe();
   },
   methods: {
-    fetchRecipe() {
-      // Realiza la petición HTTP para obtener los detalles de la receta
-      axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + this.recipeId)
+    fetchRecipe() {axios.get('http://primer-proyecto.test/api/recipes/recipe/' + this.recipeId)
         .then(response => {
-          // Actualiza los datos de la receta en el componente
-          let recipe = response.data.meals[0];
-          this.$data.image = recipe.strMealThumb;
-          this.$data.category = recipe.strCategory;
-          this.$data.name = recipe.strMeal;
-          this.$data.instructions = recipe.strInstructions;
+          let recipe = response.data[0][0];
 
-          let ingredientsList = "";
-          for (let i = 1; i <= 20; i++) {
-            if (recipe["strIngredient" + i] != "" && recipe["strIngredient" + i] != null) {
-              ingredientsList += recipe["strMeasure" + i] + " - " + recipe["strIngredient" + i] + "\n";
-            }
-          }
-          this.$data.ingredients = ingredientsList;
+          this.image = "http://localhost/primer-proyecto/public/storage/imgs/"+recipe.image;
+          this.category = recipe.category;
+          this.name = recipe.name;
+          this.likes_number= recipe.likes;
+          this.instructions = recipe.preparation_instructions
+          ;
+
+          let ingredientsArray= response.data[1];
+          let ingredientText = '';
+
+          ingredientsArray.forEach((ingredient) => {
+            const { description, amount, measurement_unit } = ingredient;
+            const ingredientString = `${amount} ${measurement_unit} ${description}`;
+            ingredientText += `${ingredientString}\n`;
+          });
+
+          this.ingredients = ingredientText;
         })
         .catch(error => console.log(error));
     },

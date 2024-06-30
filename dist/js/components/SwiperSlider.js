@@ -34,7 +34,7 @@ app.component('swiper-slider', {data() {
             loop: true,
             speed: 1700,
             autoplay: {
-                delay: 3500,
+                delay: 3300,
                 disableOnInteraction:false
             },
             effect: 'coverflow',
@@ -68,7 +68,7 @@ app.component('swiper-slider', {data() {
     template:
         /*html */
         `<section id="tranding">
-            <h2 class="text-center text-light">Recetas más votadas</h2>
+            <h2 class="text-center text-light">Recetas con más likes</h2>
             <div class="mt-lg-5 container-fluid bg-wine pb-4">
                 <div class="swiper tranding-slider">
                     <div class="swiper-wrapper">

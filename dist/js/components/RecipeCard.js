@@ -8,24 +8,24 @@ app.component("recipe-card", {
             type: Number,
             default: 0
         },
-        name:{
+        name: {
             type: String,
             default: ""
         },
-        image:{
+        image: {
             type: String,
-            default: ""
+            default: "http://localhost/primer-proyecto/public/storage/imgs/recipe-placeholder.png"
         },
-        description:{
+        description: {
             type: String,
             default: "Esta descripción es muy larga para hacer la prueba"
         },
-        category:{
+        category: {
             type: String,
             default: ""
         },
         likes: {
-            type:Number,
+            type: Number,
             default: 0
         },
         liked: {
@@ -48,19 +48,88 @@ app.component("recipe-card", {
     },
     methods: {
         onClickLike() {
-            if (this.isLiked) {
-                this.likes_number--;
-                this.isLiked = false;
+            let token = localStorage.getItem('accessToken');
+            let user_id = localStorage.getItem('userId');
+
+            if (user_id === null || typeof user_id === 'undefined' || token === null || typeof token === 'undefined') {
+                Swal.fire({
+                    title: 'El usuario no se encuentra logeado',
+                    text: 'Debe loquearse para poder dar like a una receta',
+                    icon: 'warning',
+                    confirmButtonText: 'Ok'
+                })
             } else {
-                this.likes_number++;
-                this.isLiked = true;
+                // if (this.isLiked) {
+                //     this.likes_number--;
+                //     this.isLiked = false;
+                // } else {
+                //     this.likes_number++;
+                //     this.isLiked = true;
+                // }
+                axios({
+                    method: 'get',
+                    url: "http://primer-proyecto.test/api/users/likes/" + user_id + "/" + this.id
+                })
+                    .then(
+                        (response) => {
+                            console.log(response);
+                            if (response.data.code == 200) {
+                                this.isLiked = true;
+                                this.likes= response.data.likes;
+                                console.log(response.data.likes);
+                            } else {
+                                this.isLiked = true;
+                            }
+                        }
+                    )
+                    .catch(
+                        error => console.log(error)
+                    )
             }
         },
         onClickSave() {
-            if (this.isSaved) {
-                this.isSaved = false;
+            let token = localStorage.getItem('accessToken');
+            let user_id = localStorage.getItem('userId');
+
+            if (user_id === null || typeof user_id === 'undefined' || token === null || typeof token === 'undefined') {
+                Swal.fire({
+                    title: 'El usuario no se encuentra logeado',
+                    text: 'Debe loquearse para poder guardar una receta',
+                    icon: 'warning',
+                    confirmButtonText: 'Ok'
+                })
             } else {
-                this.isSaved = true;
+                if (this.isSaved) {
+                    axios({
+                        method: 'get',
+                        url: "http://primer-proyecto.test/api/users/removesavedrecipe/" + user_id + "/" + this.id
+                    })
+                        .then(
+                            (response) => {
+                                if (response.data.code == 200) {
+                                    this.isSaved = false;
+                                }
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        )
+                } else {
+                    axios({
+                        method: 'get',
+                        url: "http://primer-proyecto.test/api/users/saverecipe/" + user_id + "/" + this.id
+                    })
+                        .then(
+                            (response) => {
+                                if (response.data.code == 200) {
+                                    this.isSaved = true;
+                                }
+                            }
+                        )
+                        .catch(
+                            error => console.log(error)
+                        )
+                }
             }
         }
     },
@@ -80,7 +149,7 @@ app.component("recipe-card", {
               </div>
               <div>
                 <div class="likes-number">
-                  <p>{{likes_number}}</p>
+                  <p>{{likes}}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between p-4 pt-3 pb-2 bg-white">
                   <button type="button" class="card-btn-green" v-bind:class="{ 'active': isLiked }" title="Like" v-on:click="onClickLike()">
@@ -118,7 +187,10 @@ app.component("recipe-card", {
                         <button type="button" class="card-btn-green mb-2" v-bind:class="{ 'active': isLiked }" v-on:click="onClickLike()" title="Like">
                             <i class="fas fa-heart"></i>
                         </button>
-                        <p class="text-center text-light">{{likes_number}}</p>
+                        
+                        <div class="text-center text-light">
+                            <p class="likes-number-slider" v-model="likes_number">{{likes}}</p>
+                        </div>
                     </div>
                 </div>
             </div>

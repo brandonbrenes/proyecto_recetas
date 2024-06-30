@@ -21,36 +21,8 @@
             <nav-var :categories="categories"></nav-var>
             <!-- Fin nav -->
     
-            <div class="container">
-                <div class="row mt-5">
-                    <div class="m-auto col-md-6">
-                        <section>
-                            <h1>Login</h1>
-                            <form class="needs-validation">
-                                <div class="form-group was-validated">
-                                    <input class="form-control" type="email" id="email" placeholder="Correo electrónico"
-                                        required>
-                                </div>
-                                <div class="form-group was-validated mt-5 mb-3">
-                                    <input class="form-control" type="password" id="password" placeholder="Contraseña"
-                                        required>
-                                </div>
-    
-                                <div class="mb-3 mt-3">
-                                    <a class="text-wine me-5" href="registro.html">Registrarse</a>
-                                    <a class="text-wine" href="recuperar-password.html">Recuperar contraseña</a>
-                                </div>
-    
-                                <input class="button-green" type="submit" value="Ingresar" id="ingresar" href="index.html">
-                            </form>
-                        </section>
-                    </div>
-                    <div class="col-md-6">
-                        <img class="img-fluid" src="images/Spaghetti.png" alt="Spaguetti">
-    
-                    </div>
-                </div>
-            </div>
+            <login></login>
+
         </header>
     
         <!-- inicio fin footer -->
@@ -104,9 +76,14 @@
     <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
     <!-- FIn librerías de Vue -->
 
+    <!-- librería de alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- librería de alertas -->
+    
     <!-- main js y componentes -->
     <script src="js/main.js"></script>
     <script src="js/components/NavVar.js"></script>
+    <script src="js/components/Login.js"></script>
     <!-- <script src="js/router.js"></script> -->
     <!-- main js -->
 
